@@ -1,10 +1,10 @@
+@use './reset' as *;
 @use './variables' as *;
 @use './fonts' as *;
+@use './index' as *;
+@use './app' as *;
 
-.App {
-    text-align: center;
-
-    .text {
-        color: $blue;
-    }
-}
+@use './components/footerbar' as *;
+@use './components/headerbar/headerbar' as *;
+@use './components/headerbar/headerlinks' as *;
+@use './components/headerbar/hamburgermenu' as *;

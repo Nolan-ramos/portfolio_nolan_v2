@@ -1,0 +1,23 @@
+.App {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 100%;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    color: var(--color);
+    border-radius: 8px;
+    .routes_container{
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .text_hover:hover{
+        color: #FFFFFF;
+    }
+}

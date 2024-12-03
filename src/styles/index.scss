@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #010C15;
+    height: 100vh;
+    width: 100%;
+}
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+#root{
+    height: 100%;
+    padding: 70px;
+}
+@media (max-width: 1600px) {
+    #root{
+        padding: 60px;
+    }
+}
+@media (max-width: 1400px) {
+    #root{
+        padding: 50px;
+    }
+}
+@media (max-width: 991px) {
+    #root{
+        padding: 40px;
+    }
+}
+@media (max-width: 768px) {
+    #root{
+        padding: 32px;
+    }
+}
+@media (max-width: 420px) {
+    #root{
+        padding: 24px;
+    }
+}
+@media (max-width: 360px) {
+    #root{
+        padding: 20px;
+    }
+}
+@media (max-width: 320px) {
+    #root{
+        padding: 16px;
+    }
+}
+@media (max-width: 280px) {
+    #root{
+        padding: 12px;
+    }
+}

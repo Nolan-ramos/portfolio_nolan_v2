@@ -1,0 +1,9 @@
+.footerbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    height: 50px;
+    width: 100%;
+    border-top: 1px solid var(--border-color);
+}
