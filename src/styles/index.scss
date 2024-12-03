@@ -8,12 +8,12 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #010C15;
-    height: 100vh;
+    height: 100svh;
     width: 100%;
 }
 @supports (-webkit-touch-callout: none) {
     body {
-        min-height: -webkit-fill-available;
+        height: -webkit-fill-available;
     }
 }
 code {
