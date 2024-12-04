@@ -15,7 +15,7 @@ const HeaderLinks = ({ menuOpen, closeMenu }) => {
                     <NavLink
                         key={link.path}
                         className={({ isActive }) =>
-                            `text_hover headerbar__link ${isActive ? 'headerbar__link__active' : ''}`
+                            `text-hover mouse-hover headerbar__link ${isActive ? 'headerbar__link__active' : ''}`
                         }
                         to={link.path}
                         onClick={closeMenu}>
@@ -26,7 +26,7 @@ const HeaderLinks = ({ menuOpen, closeMenu }) => {
             <div className="headerbar__contact">
                 <NavLink
                     className={({ isActive }) =>
-                        `text_hover headerbar__link headerbar__contact__link ${isActive ? 'headerbar__link__active' : ''}`
+                        `text-hover mouse-hover headerbar__link headerbar__contact__link ${isActive ? 'headerbar__link__active' : ''}`
                     }
                     to="/contact"
                     onClick={closeMenu}>

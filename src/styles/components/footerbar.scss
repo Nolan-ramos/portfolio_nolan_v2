@@ -1,9 +1,76 @@
 .footerbar{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex: 0 0 auto;
     height: 50px;
     width: 100%;
     border-top: 1px solid var(--border-color);
+    &__left,
+    &__left__text,
+    &__left__reseau,
+    &__right,
+    &__right__link{
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    &__left__reseau svg,
+    &__right__link &__right__reseau svg{
+        height: 24px;
+        width: 24px;
+    }
+    &__left{
+        &__text,
+        &__reseau{
+            border-right: 1px solid var(--border-color);
+        }
+        &__text{
+            padding: 0 24px;
+            text-align: center;
+        }
+        &__reseau{
+            padding: 0 16px;
+        }
+    }
+    &__right{
+        &__link{  
+            column-gap: 8px;
+            padding: 0 24px;
+            border-left: 1px solid var(--border-color);
+        }
+    }
+    @media (max-width: 768px) {
+        justify-content: flex-start;
+        &__right{
+            &__link{  
+                padding: 0 16px;
+                border-left: unset;
+                border-right: 1px solid var(--border-color);
+            }
+            &__text{
+                display: none;
+            }
+        }
+    }
+    @media (max-width: 420px) {
+        &__left__reseau svg,
+        &__right__link &__right__reseau svg{
+            height: 16px;
+            width: 16px;
+        }
+        &__left{
+            &__text{
+                padding: 0 16px;
+            }
+            &__reseau{
+                padding: 0 12px;
+            }
+        }
+        &__right{
+            &__link{  
+                padding: 0 12px;
+            }
+        }
+    }
 }

@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import FooterBar from './components/FooterBar.js';
+import FooterBar from './components/footerbar/FooterBar.js';
 import HeaderBar from './components/headerbar/HeaderBar.js';
+import Mouse from './components/Mouse.js';
+import Themes from './components/themes/Themes.js';
 import About from './pages/About.js';
 import Contact from './pages/Contact.js';
 import Home from './pages/Home.js';
@@ -21,6 +23,8 @@ function App() {
                     </Routes>
                 </div>
                 <FooterBar /> 
+                <Themes /> 
+                <Mouse /> 
             </div>
         </BrowserRouter>
     );

@@ -17,7 +17,13 @@
         justify-content: center;
         height: 100%;
     }
-    .text_hover:hover{
+    .text-hover{
+        transition: color 0.3s ease-in-out;
+    }
+    .text-hover:hover{
         color: #FFFFFF;
+    }
+    .mouse-hover svg {
+        pointer-events: none;
     }
 }

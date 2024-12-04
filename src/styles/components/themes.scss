@@ -1,0 +1,49 @@
+.themes{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%) translateX(50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: var(--color);
+    &__text{
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        &__svg {
+            transform-origin: center;
+            animation: rotate 10s linear infinite;
+            width: 120px;
+            height: 120px;
+        }
+        &__content{
+            font-size: 9.2px;
+            fill: var(--background-color);
+        }
+    }
+    &__cercle{
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 16px);
+        transform: translateY(-50%) translateX(-50%) rotate(-75deg);
+        cursor: pointer;
+        &__svg{
+            width: 24px;
+            height: 24px;
+            path{
+                fill: var(--background-color);
+            }
+        }
+    }
+    @keyframes rotate {
+        0% {
+        transform: rotate(0deg);
+        }
+        100% {
+        transform: rotate(360deg);
+        }
+    }
+}
