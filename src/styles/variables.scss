@@ -1,15 +1,3 @@
-// red
-:root {
-    --primary-background-color: #2A0000;
-    --secondary-background-color: #3F0613;
-    --secondary-background-color-opacity: #3F0613E6;
-    --border-color: #8B1A1A;
-    --primary-action-color: #FF4500;
-    --secondary-action-color: #FF6F00;
-    --primary-shape-color: #FF9B3D;
-    --secondary-shape-color: #FF4F4F;
-    --color: #D95C5C;
-}
 // blue
 :root {
     --primary-background-color: #010C15;
@@ -22,6 +10,7 @@
     --secondary-shape-color: #4d5bce;
     --color: #607B96;
 }
+
 // purple
 :root {
     --primary-background-color: #120015;
@@ -33,4 +22,17 @@
     --primary-shape-color: #FF94C2;
     --secondary-shape-color: #D600FF;
     --color: #A073C0;
+}
+
+// red
+:root {
+    --primary-background-color: #2A0000;
+    --secondary-background-color: #3F0613;
+    --secondary-background-color-opacity: #3F0613E6;
+    --border-color: #8B1A1A;
+    --primary-action-color: #FF4500;
+    --secondary-action-color: #FF6F00;
+    --primary-shape-color: #FF9B3D;
+    --secondary-shape-color: #FF4F4F;
+    --color: #D95C5C;
 }

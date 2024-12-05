@@ -2,8 +2,6 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 body {
-    position: relative;
-    overflow: hidden;
     font-family: "Fira Code", monospace;
     font-optical-sizing: auto;
     -webkit-font-smoothing: antialiased;
@@ -18,8 +16,6 @@ body {
     }
 }
 #root{
-    position: relative;
-    overflow: hidden;
     height: 100%;
     padding: 60px;
 }
