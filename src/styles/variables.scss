@@ -1,72 +1,36 @@
-// orange
+// red
 :root {
-    --body-color: #1A0D00;
-    --background-color: #331A00;
-    --border-color: #6D432C;
-    --action-color: #FF8C00;
-    --color: #C5A179;
-}
-// yellow
-:root {
-    --body-color: #1A1800;
-    --background-color: #332F00;
-    --border-color: #6D632C;
-    --action-color: #FFD700;
-    --color: #C5B579;
-}
-// blue
-:root {
-    --body-color: #010C15;
-    --background-color: #011627;
-    --border-color : #1E2D3D;
-    --action-color : #00BFFF;
-    --color : #607B96;
-}
-// brown
-:root {
-    --body-color: #1A0D00;
-    --background-color: #331A00;
-    --border-color: #6D432C;
-    --action-color: #FF8C69;
-    --color: #C5A179;
-}
-// beige
-:root {
-    --body-color: #1A1510;
-    --background-color: #332B21;
-    --border-color: #6D5E4D;
-    --action-color: #FFDAB9;
-    --color: #C5B39A;
+    --primary-background-color: #2A0000;
+    --secondary-background-color: #3F0613;
+    --secondary-background-color-opacity: #3F0613E6;
+    --border-color: #8B1A1A;
+    --primary-action-color: #FF4500;
+    --secondary-action-color: #FF6F00;
+    --primary-shape-color: #FF9B3D;
+    --secondary-shape-color: #FF4F4F;
+    --color: #D95C5C;
 }
 // purple
 :root {
-    --body-color: #12001A;
-    --background-color: #230033;
-    --border-color : #5A2C6D;
-    --action-color : #E040FB;
-    --color : #A879C5;
+    --primary-background-color: #120015;
+    --secondary-background-color: #1E0038;
+    --secondary-background-color-opacity: #1E00388C;
+    --border-color: #3C0F5B;
+    --primary-action-color: #8000FF;
+    --secondary-action-color: #D5006D;
+    --primary-shape-color: #FF94C2;
+    --secondary-shape-color: #D600FF;
+    --color: #A073C0;
 }
-// green
+// blue
 :root {
-    --body-color: #001A00;
-    --background-color: #003300;
-    --border-color: #2C6D2C;
-    --action-color: #00FF84;
-    --color: #79C57A;
-}
-// pink
-:root {
-    --body-color: #1A0010;
-    --background-color: #330021;
-    --border-color: #6D2C4D;
-    --action-color: #FF007F;
-    --color: #C57AA5;
-}
-// red
-:root {
-    --body-color: #1A0000;
-    --background-color: #330000;
-    --border-color: #6D2C2C;
-    --action-color: #FF1744;
-    --color: #C57A7A;
+    --primary-background-color: #010C15;
+    --secondary-background-color: #011e35;
+    --secondary-background-color-opacity: #011e35CC;
+    --border-color: #1E2D3D;
+    --primary-action-color: #00BFFF;
+    --secondary-action-color: #00ff00;
+    --primary-shape-color: #43d9ad;
+    --secondary-shape-color: #4d5bce;
+    --color: #607B96;
 }

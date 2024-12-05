@@ -14,7 +14,7 @@
     &__link{
         border-bottom: 3px solid transparent;
         &__active{
-            border-bottom: 3px solid var(--action-color);
+            border-bottom: 2px solid var(--secondary-action-color);
             color: #FFFFFF;
         }
     }

@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Background from './components/Background/Background.js';
 import FooterBar from './components/footerbar/FooterBar.js';
 import HeaderBar from './components/headerbar/HeaderBar.js';
 import Mouse from './components/Mouse.js';
@@ -13,6 +14,7 @@ function App() {
     return (
         <BrowserRouter>
             <div className="App">
+                <Background /> 
                 <HeaderBar /> 
                 <div className="routes_container">
                     <Routes>

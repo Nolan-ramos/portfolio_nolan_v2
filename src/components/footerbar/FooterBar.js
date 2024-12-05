@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../styles/components/footerbar.scss';
+import { GameIconsPalette } from "./GameIconsPalette";
 import { LineMdGithubLoop } from "./LineMdGithubLoop";
 import { LineMdLinkedin } from "./LineMdLinkedin";
 
@@ -13,12 +14,15 @@ const FooterBar = () => {
                 href="https://www.linkedin.com/in/nolan-ramos/">
                     <LineMdLinkedin/>
                 </a>
+                <a 
+                className='footerbar__left__reseau text-hover mouse-hover' 
+                href="https://github.com/Nolan-ramos">
+                    <LineMdGithubLoop />
+                </a>
             </div>
             <div className='footerbar__right'>
-                <a className='footerbar__right__link text-hover mouse-hover' href="https://github.com/Nolan-ramos">
-                    <div className='footerbar__right__text'>nolan-ramos</div>
-                    <div className='footerbar__right__reseau'><LineMdGithubLoop /></div>
-                </a>
+                <div className='footerbar__right__text'>Changez le thème :</div>
+                <div className='footerbar__right__icon text-hover mouse-hover'><GameIconsPalette /></div>
             </div>
         </footer>
     );

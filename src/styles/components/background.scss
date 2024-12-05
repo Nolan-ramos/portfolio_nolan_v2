@@ -1,0 +1,66 @@
+.background{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: var(--secondary-background-color-opacity);
+    &__shapes{
+        height:100%;
+        width: 100%;
+    }
+    &__shape{
+        width: 500px;
+        height: 200px;
+        opacity: 0.4;
+        position: fixed;
+        border-radius: 100px;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        filter: blur(60px);
+        &__first{
+            top: 50%;
+            right: 170px;
+            background-color: var(--primary-shape-color);
+            animation-name: shape_animation_1;
+            transform: translateY(-50%) rotate(326deg);
+            transform-origin: center center;
+        }
+        &__second{
+            top: 60%;
+            right: 150px;
+            background-color: var(--secondary-shape-color);
+            animation-name: shape_animation_2;
+            transform: translateY(-50%) rotate(30deg);
+            transform-origin: center center;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__shape{
+            opacity: 0.2;
+            &__first,
+            &__second{
+                right: 0;
+            }
+        }
+    }
+    @keyframes shape_animation_1 {
+        0% {
+            transform: translateY(-50%) rotate(326deg);
+        }
+        100% {
+            transform: translateY(-50%) rotate(686deg);
+        }
+    }
+    
+    @keyframes shape_animation_2 {
+        0% {
+            transform: translateY(-50%) rotate(390deg);
+        }
+        100% {
+            transform: translateY(-50%) rotate(30deg);
+        }
+    }    
+}

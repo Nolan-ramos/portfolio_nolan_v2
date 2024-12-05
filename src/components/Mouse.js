@@ -59,17 +59,17 @@ const Mouse = () => {
         left: `${mousePosition.x}px`,
         width: '10px',
         height: '10px',
-        backgroundColor: `${isHovering ? 'rgba(0, 0, 0, 0)' : 'var(--action-color)'}`,
+        backgroundColor: `${isHovering ? 'rgba(0, 0, 0, 0)' : 'var(--secondary-action-color)'}`,
         transform: `translate(-50%, -50%) scale(${isHovering ? 2 : 1})`,
-        border: '1.5px solid var(--action-color)',
+        border: '1.5px solid var(--secondary-action-color)',
         pointerEvents: 'none',
-        boxShadow: 'var(--action-color) 0px 0px 15px 2px, inset 0 0 10px 1px var(--action-color)',
+        boxShadow: 'var(--secondary-action-color) 0px 0px 15px 2px, inset 0 0 10px 1px var(--secondary-action-color)',
         transition: 'transform 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
     };
 
     return (
         <div>
-            <div style={cursorStyle}></div>
+            <div className="custom-cursor" style={cursorStyle}></div>
         </div>
     );
 };
