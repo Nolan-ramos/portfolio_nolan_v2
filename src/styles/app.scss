@@ -11,6 +11,8 @@
     border: 1px solid var(--border-color);
     color: var(--color);
     border-radius: 8px;
+    max-width: 1800px;
+    margin: auto;
     .routes_container{
         flex: 1 1 auto;
         display: flex;
