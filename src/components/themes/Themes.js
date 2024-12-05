@@ -6,11 +6,13 @@ import { GameIconsPalette } from "./GameIconsPalette";
 const Themes = () => {
     return (
         <div className='themes'>
-            <div className='themes__text'>
-                <CircularText />
-            </div>
-            <div className='themes__cercle'>
-                <GameIconsPalette />
+            <div className='themes__container'>
+                <div className='themes__text'>
+                    <CircularText />
+                </div>
+                <div className='themes__cercle'>
+                    <GameIconsPalette />
+                </div>
             </div>
         </div>
     );

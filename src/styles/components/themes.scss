@@ -1,18 +1,23 @@
 .themes{
     position: absolute;
-    right: 0;
-    top: 50%;
-    z-index: 1;
-    transform: translateY(-50%) translateX(50%);
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background-color: var(--color);
-    &__text{
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow: hidden;
+    &__container{
         position: absolute;
-        top: 50%;
-        left: 10px;
-        transform: translateY(-50%);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--color);
+        border-radius: 50%;
+    }
+    &__text{
         &__svg {
             transform-origin: center;
             animation: rotate 10s linear infinite;
@@ -26,9 +31,9 @@
     }
     &__cercle{
         position: absolute;
-        top: 50%;
-        left: calc(50% - 16px);
-        transform: translateY(-50%) translateX(-50%) rotate(-75deg);
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-0deg);
         cursor: pointer;
         &__svg{
             width: 24px;
