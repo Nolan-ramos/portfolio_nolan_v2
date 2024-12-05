@@ -14,8 +14,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--color);
         border-radius: 50%;
+        border: 1px solid var(--border-color);
     }
     &__text{
         &__svg {
@@ -26,7 +26,7 @@
         }
         &__content{
             font-size: 9.2px;
-            fill: var(--background-color);
+            fill: var(--color);
         }
     }
     &__cercle{
@@ -39,7 +39,7 @@
             width: 24px;
             height: 24px;
             path{
-                fill: var(--background-color);
+                fill: var(--color);
             }
         }
     }

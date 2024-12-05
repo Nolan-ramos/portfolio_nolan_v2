@@ -15,12 +15,12 @@
         width: 500px;
         height: 200px;
         opacity: 0.4;
-        position: fixed;
+        position: absolute;
         border-radius: 100px;
         animation-duration: 15s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        filter: blur(60px);
+        filter: blur(80px);
         &__first{
             top: 50%;
             right: 170px;

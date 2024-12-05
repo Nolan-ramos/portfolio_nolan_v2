@@ -15,6 +15,8 @@ function App() {
         <BrowserRouter>
             <div className="App">
                 <Background /> 
+                <Themes /> 
+                <Mouse /> 
                 <HeaderBar /> 
                 <div className="routes_container">
                     <Routes>
@@ -25,8 +27,6 @@ function App() {
                     </Routes>
                 </div>
                 <FooterBar /> 
-                <Themes /> 
-                <Mouse /> 
             </div>
         </BrowserRouter>
     );

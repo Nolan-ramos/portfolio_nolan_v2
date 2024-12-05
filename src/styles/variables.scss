@@ -11,19 +11,6 @@
     --color: #607B96;
 }
 
-// purple
-:root {
-    --primary-background-color: #120015;
-    --secondary-background-color: #1E0038;
-    --secondary-background-color-opacity: #1E00388C;
-    --border-color: #3C0F5B;
-    --primary-action-color: #8000FF;
-    --secondary-action-color: #D5006D;
-    --primary-shape-color: #FF94C2;
-    --secondary-shape-color: #D600FF;
-    --color: #A073C0;
-}
-
 // red
 :root {
     --primary-background-color: #2A0000;
@@ -35,4 +22,17 @@
     --primary-shape-color: #FF9B3D;
     --secondary-shape-color: #FF4F4F;
     --color: #D95C5C;
+}
+
+// purple
+:root {
+    --primary-background-color: #120015;
+    --secondary-background-color: #1E0038;
+    --secondary-background-color-opacity: #1E00388C;
+    --border-color: #3C0F5B;
+    --primary-action-color: #8000FF;
+    --secondary-action-color: #D5006D;
+    --primary-shape-color: #FF94C2;
+    --secondary-shape-color: #D600FF;
+    --color: #A073C0;
 }
