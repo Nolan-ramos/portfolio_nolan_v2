@@ -1,10 +1,9 @@
 import React from 'react';
-import '../../styles/components/footerbar.scss';
 import { GameIconsPalette } from "./GameIconsPalette";
 import { LineMdGithubLoop } from "./LineMdGithubLoop";
 import { LineMdLinkedin } from "./LineMdLinkedin";
 
-const FooterBar = () => {
+const FooterBar = ({ toggleTheme }) => {
     return (
         <footer className='footerbar'>
             <div className='footerbar__left'>
@@ -22,7 +21,11 @@ const FooterBar = () => {
             </div>
             <div className='footerbar__right'>
                 <div className='footerbar__right__text'>Changez le thème :</div>
-                <div className='footerbar__right__icon text-hover mouse-hover'><GameIconsPalette /></div>
+                <div 
+                    className='footerbar__right__icon text-hover mouse-hover' 
+                    onClick={toggleTheme}>
+                    <GameIconsPalette />
+                </div>
             </div>
         </footer>
     );

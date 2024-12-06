@@ -9,7 +9,7 @@ const HeaderLinks = ({ menuOpen, closeMenu }) => {
     ];
 
     return (
-        <nav className={`headerbar__nav ${menuOpen ? 'headerbar__nav__open' : ''}`}>
+        <nav className={`headerbar__nav ${menuOpen ? 'headerbar__nav__open' : 'headerbar__nav__close'}`}>
             <div className="headerbar__home_about_projects">
                 {links.map((link) => (
                     <NavLink

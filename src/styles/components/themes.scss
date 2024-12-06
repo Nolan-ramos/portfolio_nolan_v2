@@ -1,54 +1,118 @@
 .themes{
     position: absolute;
     left: 0;
-    top: 0;
-    z-index: -1;
+    bottom: 50px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    height: 0;
     width: 100%;
-    height: calc(100% - 50px);
+    transition: height 0.5s ease-in-out;
     overflow: hidden;
-    &__container{
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%) translateY(50%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        border: 1px solid var(--border-color);
+    background-color: var(--secondary-background-color);
+    &__open {
+        height: calc(100% - 50px);
+        animation: border_themes_open 0.5s linear forwards;
     }
-    &__text{
-        &__svg {
-            transform-origin: center;
-            animation: rotate 10s linear infinite;
-            width: 120px;
-            height: 120px;
+    &__close{
+        animation: border_themes_close 0.5s linear forwards;
+    }
+    &__icon__close{
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        svg{
+            width: 32px;
+            height: 32px;
         }
+    }
+    &__container__svg{
+        height: 110.5px;
+        width: 100%;
+        flex: 0 0 auto;
         &__content{
-            font-size: 9.2px;
-            fill: var(--color);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            &__text{
+                &__icon {
+                    transform-origin: center;
+                    animation: rotate 10s linear infinite;
+                    width: 120px;
+                    height: 120px;
+                }
+                &__content{
+                    font-size: 9.2px;
+                    fill: var(--color);
+                }
+            }
+            &__cercle{
+                position: absolute;
+                top: 62.5px;
+                left: 50%;
+                transform: translateX(-50%) rotate(180deg);
+                transition: all 0.3s ease-in-out;
+                &__icon{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
         }
     }
-    &__cercle{
-        position: absolute;
-        top: 30px;
-        left: 50%;
-        transform: translateX(-50%) rotate(-0deg);
-        cursor: pointer;
-        &__svg{
-            width: 24px;
-            height: 24px;
-            path{
-                fill: var(--color);
+    &__container__choice{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex: 1 1 auto;
+        overflow-y: auto;
+        height: 100%;
+        &__content{
+            position: relative;
+            width: 100%;
+            &__color{
+                background-color: var(--secondary-background-color);
+                position: sticky;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-top: 1px solid var(--border-color);
+                padding: 24px;
+                width: 100%;
+                &:last-child{
+                    border-bottom: 1px solid var(--border-color);
+                }
             }
+        }
+    }
+    @keyframes border_themes_open {
+        0%, 99.9999%{
+            border-top: 1px solid var(--border-color);
+        }
+        100% {
+            border-top: unset;
+        }
+    }
+    @keyframes border_themes_close {
+        0%, 99.9999%{
+            border-top: 1px solid var(--border-color);
+        }
+        100% {
+            border-top: unset;
         }
     }
     @keyframes rotate {
         0% {
-        transform: rotate(0deg);
+            transform: rotate(0deg);
         }
         100% {
-        transform: rotate(360deg);
+            transform: rotate(360deg);
         }
     }
 }

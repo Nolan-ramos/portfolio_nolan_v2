@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Background from './components/Background/Background.js';
 import FooterBar from './components/footerbar/FooterBar.js';
@@ -11,13 +12,25 @@ import Projects from './pages/Projects.js';
 import './styles/main.scss';
 
 function App() {
+    const [isThemeOpen, setIsThemeOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleTheme = () => {
+        setIsThemeOpen(!isThemeOpen);
+        if (!isThemeOpen) setIsMenuOpen(false);
+    };
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+        if (!isMenuOpen) setIsThemeOpen(false);
+    };
     return (
         <BrowserRouter>
             <div className="App">
                 <Background /> 
-                <Themes /> 
+                <Themes isThemeOpen={isThemeOpen} toggleTheme={toggleTheme} />
                 <Mouse /> 
-                <HeaderBar /> 
+                <HeaderBar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} /> 
                 <div className="routes_container">
                     <Routes>
                         <Route path="/" element={<Home />} />
@@ -26,7 +39,7 @@ function App() {
                         <Route path="/contact" element={<Contact />} />
                     </Routes>
                 </div>
-                <FooterBar /> 
+                <FooterBar toggleTheme={toggleTheme} />
             </div>
         </BrowserRouter>
     );

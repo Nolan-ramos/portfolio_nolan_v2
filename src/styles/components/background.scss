@@ -14,13 +14,13 @@
     &__shape{
         width: 500px;
         height: 200px;
-        opacity: 0.4;
+        opacity: 0.3;
         position: absolute;
         border-radius: 100px;
         animation-duration: 15s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        filter: blur(80px);
+        filter: blur(70px);
         &__first{
             top: 50%;
             right: 170px;

@@ -33,15 +33,35 @@
             height: 0;
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
-            overflow: hidden;
             background-color: var(--secondary-background-color);
-            transition: height 0.3s ease-in-out;
+            transition: height 0.5s ease-in-out;
+            overflow: hidden;
             &__open{
                 height: calc(100% - 56px);
+                animation: border_header_open 0.5s linear forwards;
+            }
+            &__close{
+                animation: border_header_close 0.5s linear forwards;
             }
         }
         &__name{
             border-right: unset;
+        }
+    }
+    @keyframes border_header_open {
+        0%, 99.9999%{
+            border-bottom: 1px solid var(--border-color);
+        }
+        100% {
+            border-bottom: unset;
+        }
+    }
+    @keyframes border_header_close {
+        0%, 99.9999%{
+            border-bottom: 1px solid var(--border-color);
+        }
+        100% {
+            border-bottom: unset;
         }
     }
 }

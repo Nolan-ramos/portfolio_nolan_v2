@@ -3,9 +3,11 @@
 @use './fonts' as *;
 @use './index' as *;
 @use './app' as *;
+@use './scrollbar' as *;
 
 @use './components/footerbar' as *;
 @use './components/headerbar/headerbar' as *;
 @use './components/headerbar/headerlinks' as *;
 @use './components/headerbar/hamburgermenu' as *;
+@use './components/themes' as *;
 @use './components/background' as *;

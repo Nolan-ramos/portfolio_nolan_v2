@@ -1,7 +1,7 @@
 import React from "react";
 const CircularText = () => {
     return (
-        <svg className='themes__text__svg' viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <svg className='themes__container__svg__content__text__icon' viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <path
                     id="circle"
@@ -13,7 +13,7 @@ const CircularText = () => {
                     "
                 />
             </defs>
-            <text className='themes__text__content'>
+            <text className='themes__container__svg__content__text__content'>
                 <textPath xlinkHref="#circle">
                     Thème personnalisé - Thème personnalisé -
                 </textPath>

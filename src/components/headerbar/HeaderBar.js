@@ -1,23 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import HamburgerMenu from './HamburgerMenu';
 import HeaderLinks from './HeaderLinks.js';
 
-const HeaderBar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
-    const closeMenu = () => {
-        setMenuOpen(false);
-    };
-
+const HeaderBar = ({ isMenuOpen, toggleMenu }) => {
     return (
         <header className="headerbar">
             <div className="headerbar__name">_nolan-ramos</div>
-            <HeaderLinks menuOpen={menuOpen} closeMenu={closeMenu} />
-            <HamburgerMenu menuOpen={menuOpen} toggleMenu={toggleMenu} />
+            <HeaderLinks menuOpen={isMenuOpen} closeMenu={() => toggleMenu(false)} />
+            <HamburgerMenu menuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         </header>
     );
 };
