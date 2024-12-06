@@ -10,6 +10,7 @@
     transition: height 0.5s ease-in-out;
     overflow: hidden;
     background-color: var(--secondary-background-color);
+    border-radius: 8px 8px 0px 0px;
     &__open {
         height: calc(100% - 50px);
         animation: border_themes_open 0.5s linear forwards;
