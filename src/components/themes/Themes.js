@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CircularText from "./CircularText";
 import { GameIconsPalette } from "./GameIconsPalette";
 import { MaterialSymbolsCloseSmall } from "./MaterialSymbolsCloseSmall";
+import { MaterialSymbolsLineEndArrowNotch } from "./MaterialSymbolsLineEndArrowNotch";
 import ThemesData from "./ThemesData";
 
 const Themes = ({ isThemeOpen, toggleTheme }) => {
@@ -53,21 +54,21 @@ const Themes = ({ isThemeOpen, toggleTheme }) => {
                     return (
                         <div
                             key={colorKey}
-                            className={`themes__container__choice__content__color text-hover mouse-hover ${
-                                selectedTheme.name === theme.name ? "active" : ""
+                            className={`themes__container__choice__content__color mouse-hover ${
+                                selectedTheme.name === theme.name ? "themes__container__choice__content__color__active" : ""
                             }`}
-                            onClick={() => changeTheme(theme)}>
-                            <div className="themes__container__choice__content__color__name">{theme.name} :</div>
-                            <div className="themes__container__choice__content__color__palette">
-                                {Object.values(theme.colors).map((color, index) => (
-                                    index !== 2 && (<div key={index} className="themes__container__choice__content__color__box" style={{ backgroundColor: color }}/>)
-                                ))}
-                            </div>
+                            onClick={() => changeTheme(theme)}
+                            // style={{
+                            //     color: theme.colors["--color"],
+                            // }}
+                            >
+                            <MaterialSymbolsLineEndArrowNotch />
+                            <div className="themes__container__choice__content__color__name">{theme.name}</div>
                         </div>
                     );
                 })}
             </div>
-        </div>
+            </div>
         </div>
     );
 };

@@ -74,6 +74,10 @@
         overflow-y: auto;
         height: 100%;
         &__content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             position: relative;
             width: 100%;
             &__color{
@@ -84,23 +88,24 @@
                 align-items: center;
                 justify-content: center;
                 gap: 8px;
-                border-top: 1px solid var(--border-color);
-                padding: 24px;
+                padding: 24px 24px 24px 0;
                 width: 100%;
+                border-top: 1px solid var(--border-color);
                 &:last-child{
                     border-bottom: 1px solid var(--border-color);
                 }
-                &__palette{
-                    display: flex;
-                    border: 1px solid white;
+                &__name{
+                    transition: color 0.3s ease-in-out;
                 }
-                &__box{
-                    width: 20px;
-                    height: 10px;
-                    border-right: 1px solid white;
-                    &:last-child{
-                        border-right: unset;
-                    }
+                &__icon{
+                    opacity: 0;
+                }
+                &__active &__icon, &__active &__name{
+                    opacity: 1;
+                    color: #FFFFFF;
+                }
+                &:hover &__name{
+                    color: #FFFFFF;
                 }
             }
         }
