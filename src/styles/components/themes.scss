@@ -112,8 +112,7 @@
     }
     @media (max-width: 420px) {
         &__container__choice__content__color{
-            flex-direction: column;
-            padding: 16px;
+            padding: 16px 16px 16px -8px;
         }
     }
     @keyframes border_themes_open {
