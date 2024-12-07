@@ -20,8 +20,8 @@
     }
     &__icon__close{
         position: absolute;
-        top: 12px;
-        right: 12px;
+        top: 8px;
+        right: 8px;
         svg{
             width: 32px;
             height: 32px;
@@ -83,13 +83,32 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                gap: 8px;
                 border-top: 1px solid var(--border-color);
                 padding: 24px;
                 width: 100%;
                 &:last-child{
                     border-bottom: 1px solid var(--border-color);
                 }
+                &__palette{
+                    display: flex;
+                    border: 1px solid white;
+                }
+                &__box{
+                    width: 20px;
+                    height: 10px;
+                    border-right: 1px solid white;
+                    &:last-child{
+                        border-right: unset;
+                    }
+                }
             }
+        }
+    }
+    @media (max-width: 420px) {
+        &__container__choice__content__color{
+            flex-direction: column;
+            padding: 16px;
         }
     }
     @keyframes border_themes_open {

@@ -47,22 +47,27 @@ const Themes = ({ isThemeOpen, toggleTheme }) => {
                 </div>
             </div>
             <div className='themes__container__choice'>
-                <div className='themes__container__choice__content'>
-                    {Object.keys(ThemesData).map((colorKey) => {
-                        const theme = ThemesData[colorKey];
-                        return (
-                            <div
-                                key={colorKey}
-                                className={`themes__container__choice__content__color text-hover mouse-hover ${
-                                    selectedTheme.name === theme.name ? "active" : ""
-                                }`}
-                                onClick={() => changeTheme(theme)}>
-                                {theme.name}
+            <div className='themes__container__choice__content'>
+                {Object.keys(ThemesData).map((colorKey) => {
+                    const theme = ThemesData[colorKey];
+                    return (
+                        <div
+                            key={colorKey}
+                            className={`themes__container__choice__content__color text-hover mouse-hover ${
+                                selectedTheme.name === theme.name ? "active" : ""
+                            }`}
+                            onClick={() => changeTheme(theme)}>
+                            <div className="themes__container__choice__content__color__name">{theme.name} :</div>
+                            <div className="themes__container__choice__content__color__palette">
+                                {Object.values(theme.colors).map((color, index) => (
+                                    index !== 2 && (<div key={index} className="themes__container__choice__content__color__box" style={{ backgroundColor: color }}/>)
+                                ))}
                             </div>
-                        );
-                    })}
-                </div>
+                        </div>
+                    );
+                })}
             </div>
+        </div>
         </div>
     );
 };
