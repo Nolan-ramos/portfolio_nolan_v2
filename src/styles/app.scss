@@ -15,11 +15,10 @@
     margin: auto;
     .routes_container{
         flex: 1 1 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         height: 100%;
         width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
     .text-hover{
         transition: color 0.3s ease-in-out;
@@ -29,6 +28,20 @@
     }
     .mouse-hover svg {
         pointer-events: none;
+    }
+    .code__color__blue{
+        color: #4D5BCE;
+    }
+    .code__color__green{
+        color: #43D9AD;
+    }
+    .code__color__red{
+        color: #E99287;
+    }
+    .code__color__blue,
+    .code__color__green,
+    .code__color__red{
+        font-weight: 500;
     }
     @media (max-width: 768px) {
         .custom-cursor {

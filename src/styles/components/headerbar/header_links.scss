@@ -10,6 +10,7 @@
     }
     &__home_about_projects{
         flex: 0 0 auto;
+        overflow-y: auto;
     }
     &__link{
         border-bottom: 2px solid transparent;
@@ -41,6 +42,11 @@
             }
         }
     }
+    @media (min-width: 769px) {
+        &__link__contact{
+            display: none;
+        }
+    }
     @media (max-width: 768px) {
         &__home_about_projects &__link{
             border-right: unset;
@@ -59,8 +65,11 @@
             width: 100%;
             border-bottom: 1px solid var(--border-color);
         }
-        &__contact__link{
-            border-right: unset;
+        &__contact{
+            display: none;
+            &__link{
+                border-right: unset;
+            }
         }
     }
     @media (max-width: 420px) {

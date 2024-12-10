@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 const HeaderLinks = ({ menuOpen, closeMenu }) => {
     const links = [
-        { path: '/', label: '_Home' },
-        { path: '/about', label: '_About' },
-        { path: '/projects', label: '_Projects' }
+        { path: '/', label: '_Accueil' },
+        { path: '/about', label: '_A_propos' },
+        { path: '/projects', label: '_Projets' },
+        { path: '/contact', label: '_Contact' }
     ];
 
     return (
@@ -15,7 +16,9 @@ const HeaderLinks = ({ menuOpen, closeMenu }) => {
                     <NavLink
                         key={link.path}
                         className={({ isActive }) =>
-                            `text-hover mouse-hover headerbar__link ${isActive ? 'headerbar__link__active' : ''}`
+                            `text-hover mouse-hover headerbar__link ${isActive ? 'headerbar__link__active' : ''} ${
+                                link.path === '/contact' ? 'headerbar__link__contact' : ''
+                            }`
                         }
                         to={link.path}
                         onClick={closeMenu}>

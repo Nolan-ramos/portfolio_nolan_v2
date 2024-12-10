@@ -15,13 +15,13 @@
     &__shape{
         width: 500px;
         height: 200px;
-        opacity: 0.3;
+        opacity: 0.2;
         position: absolute;
         border-radius: 100px;
         animation-duration: 15s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        filter: blur(70px);
+        filter: blur(60px);
         &__first{
             top: 50%;
             right: 170px;
@@ -41,7 +41,6 @@
     }
     @media screen and (max-width: 767px) {
         &__shape{
-            opacity: 0.2;
             &__first,
             &__second{
                 right: 0;

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import CircularText from "./CircularText";
-import { GameIconsPalette } from "./GameIconsPalette";
-import { MaterialSymbolsCloseSmall } from "./MaterialSymbolsCloseSmall";
-import { MaterialSymbolsLineEndArrowNotch } from "./MaterialSymbolsLineEndArrowNotch";
+import { GameIconsPalette } from "./icons/GameIconsPalette";
+import { MaterialSymbolsCloseSmall } from "./icons/MaterialSymbolsCloseSmall";
+import ThemesColor from "./ThemesColor";
 import ThemesData from "./ThemesData";
 
 const Themes = ({ isThemeOpen, toggleTheme }) => {
@@ -31,43 +31,30 @@ const Themes = ({ isThemeOpen, toggleTheme }) => {
     return (
         <div className={`themes ${isThemeOpen ? "themes__open" : "themes__close"}`}>
             <div 
-                className='themes__icon__close text-hover mouse-hover'
-                onClick={toggleTheme}>
+                className="themes__icon__close text-hover mouse-hover"
+                onClick={toggleTheme}
+            >
                 <MaterialSymbolsCloseSmall />
             </div>
-            <div className='themes__container__svg'>
-                <div className='themes__container__svg__content'>
-                    <div className='themes__container__svg__content__text'>
+            <div className="themes__container__svg">
+                <div className="themes__container__svg__content">
+                    <div className="themes__container__svg__content__text">
                         <CircularText />
                     </div>
                     <div
-                        className='themes__container__svg__content__cercle text-hover mouse-hover'
-                        onClick={toggleTheme}>
+                        className="themes__container__svg__content__cercle text-hover mouse-hover"
+                        onClick={toggleTheme}
+                    >
                         <GameIconsPalette />
                     </div>
                 </div>
             </div>
-            <div className='themes__container__choice'>
-            <div className='themes__container__choice__content'>
-                {Object.keys(ThemesData).map((colorKey) => {
-                    const theme = ThemesData[colorKey];
-                    return (
-                        <div
-                            key={colorKey}
-                            className={`themes__container__choice__content__color mouse-hover ${
-                                selectedTheme.name === theme.name ? "themes__container__choice__content__color__active" : ""
-                            }`}
-                            onClick={() => changeTheme(theme)}
-                            // style={{
-                            //     color: theme.colors["--color"],
-                            // }}
-                            >
-                            <MaterialSymbolsLineEndArrowNotch />
-                            <div className="themes__container__choice__content__color__name">{theme.name}</div>
-                        </div>
-                    );
-                })}
-            </div>
+            <div className="themes__container__choice">
+                <ThemesColor 
+                    ThemesData={ThemesData} 
+                    selectedTheme={selectedTheme} 
+                    changeTheme={changeTheme} 
+                />
             </div>
         </div>
     );

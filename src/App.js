@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Background from './components/Background/Background.js';
+import Background from './components/background/Background.js';
 import FooterBar from './components/footerbar/FooterBar.js';
 import HeaderBar from './components/headerbar/HeaderBar.js';
 import Mouse from './components/Mouse.js';

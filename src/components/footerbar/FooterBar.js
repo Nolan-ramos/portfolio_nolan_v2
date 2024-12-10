@@ -1,7 +1,7 @@
 import React from 'react';
-import { GameIconsPalette } from "./GameIconsPalette";
-import { LineMdGithubLoop } from "./LineMdGithubLoop";
-import { LineMdLinkedin } from "./LineMdLinkedin";
+import { GameIconsPalette } from "./icons/GameIconsPalette";
+import { LineMdGithubLoop } from "./icons/LineMdGithubLoop";
+import { LineMdLinkedin } from "./icons/LineMdLinkedin";
 
 const FooterBar = ({ toggleTheme }) => {
     return (

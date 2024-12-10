@@ -1,0 +1,49 @@
+.themes{
+    &__container__svg{
+        height: 110.5px;
+        width: 100%;
+        flex: 0 0 auto;
+        &__content{
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            &__text{
+                &__icon {
+                    transform-origin: center;
+                    animation: rotate 10s linear infinite;
+                    width: 120px;
+                    height: 120px;
+                }
+                &__content{
+                    font-size: 9.2px;
+                    fill: var(--color);
+                }
+            }
+            &__cercle{
+                position: absolute;
+                top: 62.5px;
+                left: 50%;
+                transform: translateX(-50%) rotate(180deg);
+                transition: all 0.3s ease-in-out;
+                &__icon{
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

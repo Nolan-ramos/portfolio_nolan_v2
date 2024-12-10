@@ -41,6 +41,20 @@ const themesData = {
             "--color": "#73C095",
         },
     },
+    yellow: {
+        name: "Yellow",
+        colors: {
+            "--primary-background-color": "#332600",
+            "--secondary-background-color": "#4D3900",
+            "--secondary-background-color-opacity": "#4D3900CC",
+            "--border-color": "#806600",
+            "--primary-action-color": "#FFC300",
+            "--secondary-action-color": "#EEFF00",
+            "--primary-shape-color": "#FFD966",
+            "--secondary-shape-color": "#FFCC00",
+            "--color": "#D0B573",
+        },
+    },
     orange: {
         name: "Orange",
         colors: {

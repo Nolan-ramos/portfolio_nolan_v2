@@ -1,10 +1,14 @@
 import React from 'react';
+import HomeText from '../components/home/HomeText';
 
 const Home = () => {
     return (
-        <div>
-            <h1 className='text-hover mouse-hover'>Homepage</h1>
-            <p>Bienvenue sur la Homepage</p>
+        <div className='home'>
+            <div className='home__container'>
+                <HomeText />
+                <div className='home__code'>
+                </div>
+            </div>
         </div>
     );
 };
