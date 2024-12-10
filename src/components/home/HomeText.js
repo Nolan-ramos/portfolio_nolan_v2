@@ -12,8 +12,8 @@ const HomeText = () => {
                 <p className="home__text__top__work code__color__blue">&gt; Développeur Front-end</p>
             </div>
             <div className='home__text__bottom'>
-                <p className="home__text__bottom__slash">// Ce portfolio est la deuxième version</p>
-                <p className="home__text__bottom__slash">// Retrouvez la première version sur ce lien :</p>
+                <p className="home__text__bottom__slash">{'// Ce portfolio est la deuxième version'}</p>
+                <p className="home__text__bottom__slash">{'// Retrouvez la première version sur ce lien :'}</p>
                 <p className="home__text__bottom__link">
                     <span className='code__color__blue'>const</span>
                     <span className='code__color__green'>portfolioLink</span>
