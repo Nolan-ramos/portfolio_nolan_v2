@@ -8,7 +8,7 @@ import ThemesData from "./ThemesData";
 const Themes = ({ isThemeOpen, toggleTheme }) => {
     const getInitialTheme = () => {
         const savedTheme = localStorage.getItem("selectedTheme");
-        return savedTheme ? ThemesData[savedTheme] : ThemesData.blue;
+        return savedTheme ? ThemesData[savedTheme] : ThemesData.purple;
     };
     const [selectedTheme, setSelectedTheme] = useState(getInitialTheme());
     const applyTheme = (themeColors) => {

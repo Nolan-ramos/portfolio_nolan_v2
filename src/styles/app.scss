@@ -29,6 +29,9 @@
     .mouse-hover svg {
         pointer-events: none;
     }
+    .code__color__purple{
+        color: #C98BDF;
+    }
     .code__color__blue{
         color: #4D5BCE;
     }
@@ -38,9 +41,14 @@
     .code__color__red{
         color: #E99287;
     }
+    .code__color__orange{
+        color: #FEA55F;
+    }
+    .code__color__red,
     .code__color__blue,
     .code__color__green,
-    .code__color__red{
+    .code__color__red,
+    .code__color__orange{
         font-weight: 500;
     }
     @media (max-width: 768px) {

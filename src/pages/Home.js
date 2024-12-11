@@ -1,4 +1,5 @@
 import React from 'react';
+import HomeCode from '../components/home/HomeCode';
 import HomeText from '../components/home/HomeText';
 
 const Home = () => {
@@ -6,9 +7,8 @@ const Home = () => {
         <div className='home'>
             <div className='home__container'>
                 <HomeText />
-                <div className='home__code'>
-                </div>
             </div>
+            <HomeCode />
         </div>
     );
 };
