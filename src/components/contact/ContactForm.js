@@ -62,8 +62,7 @@ const ContactForm = () => {
                 <form
                     name="contact" // Nom du formulaire pour Netlify
                     method="POST"
-                    action="/"
-                    data-netlify="true"
+                    data-netlify="true" // Cet attribut est suffisant pour Netlify Forms
                     onSubmit={handleSubmit}
                 >
                     <input type="hidden" name="form-name" value="contact" />
