@@ -1,111 +1,59 @@
 import React, { useState } from 'react';
-import ContactBar from '../components/contact/ContactBar';
-import ContactTitle from '../components/contact/ContactTitle';
 
 const Contact = () => {
-    const [isContactOpen, setIsContactOpen] = useState(true);
-    const [isReseauxOpen, setIsReseauxOpen] = useState(true);
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [alertMessage, setAlertMessage] = useState('');
+    const [message, setMessage] = useState('');
 
-    const toggleContact = () => {
-        setIsContactOpen(!isContactOpen);
+    const handleChange = (event) => {
+        setMessage(event.target.value);
     };
 
-    const toggleReseaux = () => {
-        setIsReseauxOpen(!isReseauxOpen);
-    };
+    const handleSubmit = (event) => {
+        event.preventDefault();
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
-    };
+        const form = event.target;
+        const formData = new FormData(form);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setAlertMessage('');
-
-        try {
-            const response = await fetch('/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: new URLSearchParams(formData).toString(),
-            });
-
-            if (response.ok) {
-                setAlertMessage('Merci, votre message a bien été envoyé.');
-                setFormData({ name: '', email: '', message: '' });
-            } else {
-                setAlertMessage('Une erreur est survenue, veuillez réessayer.');
-            }
-        } catch (error) {
-            setAlertMessage('Une erreur est survenue, veuillez réessayer.');
-        } finally {
-            setIsSubmitting(false);
-        }
+        // Utilisation de fetch pour envoyer les données sans rediriger
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        })
+            .then(() => alert("Merci pour votre soumission"))
+            .catch((error) => alert(error));
     };
 
     return (
         <div className="contact">
-            <div className='contact__title__mob'>_contact</div>
-            <ContactBar
-                isContactOpen={isContactOpen}
-                isReseauxOpen={isReseauxOpen}
-                toggleContact={toggleContact}
-                toggleReseaux={toggleReseaux}
-            />
-            <div className='contact__container'>
-                <ContactTitle />
-                <div className='contact__container__form'>
-                    {/* Formulaire de contact */}
-                    <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
-                        <input type="hidden" name="form-name" value="contact" />
-                        <div>
-                            <label htmlFor="name">Nom :</label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="email">Email :</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="message">Message :</label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <button type="submit" disabled={isSubmitting}>
-                            {isSubmitting ? 'Envoi...' : 'Envoyer'}
-                        </button>
-                    </form>
-                    {/* Message de confirmation */}
-                    {alertMessage && <p>{alertMessage}</p>}
-                </div>
+            <div className="contact__title__mob">_contact</div>
+            <div className="contact__container">
+                <h2>Contactez-nous</h2>
+                <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    onSubmit={handleSubmit}
+                    className="contact__container__form"
+                >
+                    {/* Input caché pour Netlify */}
+                    <input type="hidden" name="form-name" value="contact" />
+
+                    <div>
+                        <label htmlFor="message">Message:</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            value={message}
+                            onChange={handleChange}
+                            rows="4"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     );
