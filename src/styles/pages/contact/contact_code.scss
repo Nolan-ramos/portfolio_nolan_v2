@@ -1,0 +1,18 @@
+.contact{
+    &__container__form__content__code{
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+        padding: 120px 24px 24px 24px;
+    }
+    @media (max-height: 900px) {
+        &__container__form__content__code{
+            padding: 48px 24px 24px 24px;
+        }
+    }
+    @media (max-width: 768px) {
+        &__container__form__content__code{
+            padding: 40px 24px 24px 24px;
+        }
+    }
+}

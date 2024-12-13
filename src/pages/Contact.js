@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import ContactBar from '../components/contact/ContactBar';
+import ContactCode from '../components/contact/ContactCode';
+import ContactForm from '../components/contact/ContactForm';
 import ContactTitle from '../components/contact/ContactTitle';
-import ContactForm from '../components/contact/ContactForm'; 
 
 const Contact = () => {
     const [isContactOpen, setIsContactOpen] = useState(true);
@@ -27,7 +28,10 @@ const Contact = () => {
             <div className='contact__container'>
                 <ContactTitle />
                 <div className='contact__container__form'>
-                    <ContactForm />
+                    <div className='contact__container__form__content'>
+                        <ContactForm />
+                        <ContactCode />
+                    </div>
                 </div>
             </div>
         </div>

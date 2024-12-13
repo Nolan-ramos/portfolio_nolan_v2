@@ -20,11 +20,11 @@ const ContactForm = () => {
                 if (response.ok) {
                     setIsSubmitted(true); 
                 } else {
-                    console.log('Something went wrong. Please try again.');
+                    console.log("L'envoie du formulaire a rencontré un problème");
                 }
             })
             .catch((error) => {
-                console.log('An error occurred. Please try again.');
+                console.log("L'envoie du formulaire a rencontré un problème");
             })
             .finally(() => {
                 setIsSubmitting(false);
@@ -32,40 +32,23 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="contact__container__form__content">
+        <div className="contact__container__form__content__container">
             {!isSubmitted ? (
-                <form
-                    name="contact"
-                    method="POST"
-                    data-netlify="true"
-                    onSubmit={handleSubmit}
-                >
+                <form className="contact__container__form__content__container__form" name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
                     <input type="hidden" name="form-name" value="contact" />
-                    <label htmlFor="name">Name</label> <br />
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                    />
-                    <label htmlFor="email">Email</label> <br />
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                    />
-                    <label htmlFor="message">Message</label> <br />
-                    <textarea
-                        id="message"
-                        name="message"
-                        required
-                    ></textarea>
-                    <input
-                        type="submit"
-                        value={isSubmitting ? 'Submitting...' : 'Submit message'}
-                        disabled={isSubmitting}
-                    />
+                    <div className='contact__container__form__content__container__form__field mouse-hover'>
+                        <label htmlFor="name">_nom_prenom:</label>
+                        <input type="text" id="name" name="name" placeholder="_nom_prenom" required/>
+                    </div>
+                    <div className='contact__container__form__content__container__form__field mouse-hover'>
+                        <label htmlFor="email">_email:</label>
+                        <input type="email" id="email" name="email" placeholder="_email" required/>
+                    </div>
+                    <div className='contact__container__form__content__container__form__field mouse-hover'>
+                    <label htmlFor="message">_message:</label>
+                        <textarea id="message" name="message" placeholder="_message" required></textarea>
+                    </div>
+                    <input className='text-hover mouse-hover' type="submit" value={isSubmitting ? 'Envoyer...' : 'Envoyer'} disabled={isSubmitting}/>
                 </form>
             ) : (
                 <p className="form-success-message">Thank you for your submission!</p>

@@ -4,6 +4,7 @@ const themesData = {
         colors: {
             "--primary-background-color": "#120015",
             "--secondary-background-color": "#1E0038",
+            "--tertiary-background-color": "#180021",
             "--secondary-background-color-opacity": "#1E0038CC",
             "--border-color": "#3C0F5B",
             "--primary-action-color": "#8000FF",
@@ -18,6 +19,7 @@ const themesData = {
         colors: {
             "--primary-background-color": "#010C15",
             "--secondary-background-color": "#011e35",
+            "--tertiary-background-color": "#011426",
             "--secondary-background-color-opacity": "#011e35CC",
             "--border-color": "#1E2D3D",
             "--primary-action-color": "#00BFFF",
@@ -32,6 +34,7 @@ const themesData = {
         colors: {
             "--primary-background-color": "#001A00",
             "--secondary-background-color": "#002600",
+            "--tertiary-background-color": "#001F00",
             "--secondary-background-color-opacity": "#002600CC",
             "--border-color": "#145A14",
             "--primary-action-color": "#00CC66",
@@ -41,39 +44,12 @@ const themesData = {
             "--color": "#A8E6B8",
         },
     },
-    // yellow: {
-    //     name: "Yellow",
-    //     colors: {
-    //         "--primary-background-color": "#332600",
-    //         "--secondary-background-color": "#4D3900",
-    //         "--secondary-background-color-opacity": "#4D3900CC",
-    //         "--border-color": "#806600",
-    //         "--primary-action-color": "#FFC300",
-    //         "--secondary-action-color": "#EEFF00",
-    //         "--primary-shape-color": "#FFD966",
-    //         "--secondary-shape-color": "#FFCC00",
-    //         "--color": "#D0B573",
-    //     },
-    // },
-    // orange: {
-    //     name: "Orange",
-    //     colors: {
-    //         "--primary-background-color": "#200E00",
-    //         "--secondary-background-color": "#331700",
-    //         "--secondary-background-color-opacity": "#331700CC",
-    //         "--border-color": "#753C18",
-    //         "--primary-action-color": "#FF6600",
-    //         "--secondary-action-color": "#FF0000",
-    //         "--primary-shape-color": "#E74C3C",
-    //         "--secondary-shape-color": "#FF7300",
-    //         "--color": "#D0A573",
-    //     },
-    // },
     red: {
         name: "Red",
         colors: {
             "--primary-background-color": "#2A0000",
             "--secondary-background-color": "#3F0613",
+            "--tertiary-background-color": "#35030A",
             "--secondary-background-color-opacity": "#3F0613CC",
             "--border-color": "#8B1A1A",
             "--primary-action-color": "#FF4500",
@@ -88,6 +64,7 @@ const themesData = {
         colors: {
             "--primary-background-color": "#330015",
             "--secondary-background-color": "#4A0020",
+            "--tertiary-background-color": "#3D0018",
             "--secondary-background-color-opacity": "#4A0020CC",
             "--border-color": "#751840",
             "--primary-action-color": "#FF0099",
