@@ -62,6 +62,7 @@ const ContactForm = () => {
                 <form
                     name="contact" // Nom du formulaire pour Netlify
                     method="POST"
+                    action="/"
                     data-netlify="true"
                     onSubmit={handleSubmit}
                 >
