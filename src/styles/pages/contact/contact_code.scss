@@ -12,7 +12,12 @@
     }
     @media (max-width: 768px) {
         &__container__form__content__code{
-            padding: 40px 24px 24px 24px;
+            padding: 24px;
+        }
+    }
+    @media (max-width: 420px) {
+        &__container__form__content__code{
+            padding: 16px;
         }
     }
 }

@@ -49,7 +49,20 @@
     }
     @media (max-width: 768px) {
         &__container__form__content__container{
-            padding: 40px 24px 24px 24px;
+            padding: 24px;
+        }
+    }
+    @media (max-width: 420px) {
+        &__container__form__content__container{
+            padding: 16px;
+            &__form__field{
+                label, input, textarea{
+                    font-size: 14px;
+                }
+            }
+            input[type="submit"]{
+                font-size: 14px;
+            }
         }
     }
 }

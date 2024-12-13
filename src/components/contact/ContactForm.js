@@ -38,15 +38,15 @@ const ContactForm = () => {
                     <input type="hidden" name="form-name" value="contact" />
                     <div className='contact__container__form__content__container__form__field mouse-hover'>
                         <label htmlFor="name">_nom_prenom:</label>
-                        <input type="text" id="name" name="name" placeholder="_nom_prenom" required/>
+                        <input type="text" id="name" name="name" placeholder="" required/>
                     </div>
                     <div className='contact__container__form__content__container__form__field mouse-hover'>
                         <label htmlFor="email">_email:</label>
-                        <input type="email" id="email" name="email" placeholder="_email" required/>
+                        <input type="email" id="email" name="email" placeholder="" required/>
                     </div>
                     <div className='contact__container__form__content__container__form__field mouse-hover'>
                     <label htmlFor="message">_message:</label>
-                        <textarea id="message" name="message" placeholder="_message" required></textarea>
+                        <textarea id="message" name="message" placeholder="" required></textarea>
                     </div>
                     <input className='text-hover mouse-hover' type="submit" value={isSubmitting ? 'Envoyer...' : 'Envoyer'} disabled={isSubmitting}/>
                 </form>
