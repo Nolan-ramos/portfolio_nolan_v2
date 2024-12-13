@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CircularText from "./CircularText";
 import { GameIconsPalette } from "./icons/GameIconsPalette";
-import { MaterialSymbolsCloseSmall } from "./icons/MaterialSymbolsCloseSmall";
+import { LineMdCloseSmall } from "./icons/LineMdCloseSmall";
 import ThemesColor from "./ThemesColor";
 import ThemesData from "./ThemesData";
 
@@ -32,9 +32,8 @@ const Themes = ({ isThemeOpen, toggleTheme }) => {
         <div className={`themes ${isThemeOpen ? "themes__open" : "themes__close"}`}>
             <div 
                 className="themes__icon__close text-hover mouse-hover"
-                onClick={toggleTheme}
-            >
-                <MaterialSymbolsCloseSmall />
+                onClick={toggleTheme}>
+                <LineMdCloseSmall />
             </div>
             <div className="themes__container__svg">
                 <div className="themes__container__svg__content">

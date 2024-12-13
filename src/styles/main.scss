@@ -8,11 +8,19 @@
 @use './components/headerbar/headerbar' as *;
 @use './components/headerbar/header_links' as *;
 @use './components/headerbar/hamburger_menu' as *;
+
 @use './components/footerbar' as *;
+
+@use './components/background' as *;
+
 @use './components/themes/themes' as *;
 @use './components/themes/themes_color' as *;
 @use './components/themes/circular_text' as *;
-@use './components/background' as *;
+
 @use './pages/home/home' as *;
 @use './pages/home/home_text' as *;
 @use './pages/home/home_code' as *;
+
+@use './pages/contact/contact' as *;
+@use './pages/contact/contact_bar' as *;
+@use './pages/contact/contact_title' as *;

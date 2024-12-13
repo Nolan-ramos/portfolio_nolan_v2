@@ -1,0 +1,37 @@
+.contact{
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    &__container{
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &__form{
+            flex: 1 1 auto;
+            height: 100%;
+            overflow: auto;
+            width: 100%;
+            padding: 24px;
+        }
+    }
+    &__title__mob{
+        padding: 24px;
+    }
+    @media (min-width: 769px) {
+        &__title__mob{
+            display: none;
+        }
+    }
+    @media (max-width: 768px) {
+        &{
+            flex-direction: column;
+        }
+    }
+    @media (max-width: 420px) {
+        &__title__mob{
+            padding: 16px;
+            font-size: 14px;
+        }
+    }
+}

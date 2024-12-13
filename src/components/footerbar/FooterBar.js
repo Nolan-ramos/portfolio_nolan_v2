@@ -10,12 +10,16 @@ const FooterBar = ({ toggleTheme }) => {
                 <div className='footerbar__left__text'>Trouvez-moi sur :</div>
                 <a 
                 className='footerbar__left__reseau text-hover mouse-hover' 
-                href="https://www.linkedin.com/in/nolan-ramos/">
+                href="https://www.linkedin.com/in/nolan-ramos/"
+                rel="noopener noreferrer"
+                target="_blank">
                     <LineMdLinkedin/>
                 </a>
                 <a 
                 className='footerbar__left__reseau text-hover mouse-hover' 
-                href="https://github.com/Nolan-ramos">
+                href="https://github.com/Nolan-ramos"
+                rel="noopener noreferrer"
+                target="_blank">
                     <LineMdGithubLoop />
                 </a>
             </div>

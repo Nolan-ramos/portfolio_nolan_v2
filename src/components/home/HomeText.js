@@ -18,7 +18,13 @@ const HomeText = () => {
                     <span className='code__color__blue'>const</span>
                     <span className='code__color__green'>portfolioLink</span>
                     <span>=</span>
-                    <a href="https://nolan.3ntf.fr/" className='code__color__red mouse-hover'>"https://nolan.3ntf.fr/"</a>
+                    <a 
+                        href="https://nolan.3ntf.fr/" 
+                        rel="noopener noreferrer"
+                        target="_blank" 
+                        className='code__color__red mouse-hover'>
+                        "https://nolan.3ntf.fr/"
+                    </a>
                     <span>;</span>
                 </p>
             </div>
