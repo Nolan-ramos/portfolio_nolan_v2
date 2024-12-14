@@ -52,6 +52,11 @@
                 }
             }
         }
+        @media (max-width: 991px) {
+            &{
+                width: 290px;
+            }
+        }
         @media (max-width: 768px) {
             &{
                 width: 100%;
@@ -87,6 +92,10 @@
                     &__links{
                         padding: 16px;
                         font-size: 14px;
+                    }
+                    &__link{
+                        word-break: break-word;
+                        overflow-wrap: anywhere;
                     }
                 }
             }
