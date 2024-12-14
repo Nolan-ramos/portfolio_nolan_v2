@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
-// il peut y'avoir certains soucis quand les parents ont la class : mouse-hover 
-// et que la souris target l'enfant qui n'a donc pas la class : mouse-hover 
 const Mouse = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
+    const location = useLocation(); // Permet de détecter les changements de route
 
     useEffect(() => {
         document.body.style.cursor = 'none';
@@ -24,33 +24,28 @@ const Mouse = () => {
         };
     }, []);
 
-    useEffect(() => {
+    const attachHoverEvents = () => {
         const elements = document.querySelectorAll('.mouse-hover');
 
         elements.forEach((element) => {
-            // Gestion d'entrée sur l'élément
-            const handleMouseEnter = (e) => {
-                if (e.currentTarget === element) {
-                    setIsHovering(true);
-                }
-            };
-
-            // Gestion de sortie de l'élément
-            const handleMouseLeave = (e) => {
-                if (e.currentTarget === element) {
-                    setIsHovering(false);
-                }
-            };
+            const handleMouseEnter = () => setIsHovering(true);
+            const handleMouseLeave = () => setIsHovering(false);
 
             element.addEventListener('mouseenter', handleMouseEnter);
             element.addEventListener('mouseleave', handleMouseLeave);
 
+            // Nettoyage pour éviter des écouteurs multiples
             return () => {
                 element.removeEventListener('mouseenter', handleMouseEnter);
                 element.removeEventListener('mouseleave', handleMouseLeave);
             };
         });
-    }, []);
+    };
+
+    // Réattache les événements à chaque changement de route
+    useEffect(() => {
+        attachHoverEvents();
+    }, [location]); // location change à chaque changement de page
 
     const cursorStyle = {
         position: 'fixed',
