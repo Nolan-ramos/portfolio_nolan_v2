@@ -29,7 +29,7 @@ const ContactForm = ({ onInputChange }) => {
         })
             .then((response) => {
                 if (response.ok) {
-                    setIsSubmitted(true); // Mettre à jour l'état local
+                    setIsSubmitted(true);
                 } else {
                     console.log("L'envoi du formulaire a rencontré un problème");
                 }
@@ -40,6 +40,12 @@ const ContactForm = ({ onInputChange }) => {
             .finally(() => {
                 setIsSubmitting(false);
             });
+    };
+
+    const resetForm = () => {
+        setFormData({ name: '', email: '', message: '' });
+        setIsSubmitted(false);
+        onInputChange({ name: '', email: '', message: '' });
     };
 
     return (
@@ -88,12 +94,16 @@ const ContactForm = ({ onInputChange }) => {
                     <input
                         className='text-hover mouse-hover'
                         type="submit"
-                        value={isSubmitting ? 'Envoyer...' : 'Envoyer'}
+                        value={isSubmitting ? 'Envoyez...' : 'Envoyez'}
                         disabled={isSubmitting}
                     />
                 </form>
             ) : (
-                <p className="form-success-message">Merci pour votre soumission !</p>
+                <div className="contact__container__form__content__container__message"> 
+                    <h3>Merci!</h3>
+                    <p>Votre message a bien été envoyé, vous recevrez une réponse sous peu!</p>
+                    <button onClick={resetForm}>Nouveau message</button>
+                </div>
             )}
         </div>
     );
