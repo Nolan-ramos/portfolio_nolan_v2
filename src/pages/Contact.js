@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ContactBar from '../components/contact/ContactBar';
-import ContactCode from '../components/contact/ContactCode';
-import ContactForm from '../components/contact/ContactForm';
+import ContactFormCode from '../components/contact/ContactFormCode';
 import ContactTitle from '../components/contact/ContactTitle';
 
 const Contact = () => {
@@ -28,10 +27,7 @@ const Contact = () => {
             <div className='contact__container'>
                 <ContactTitle />
                 <div className='contact__container__form'>
-                    <div className='contact__container__form__content'>
-                        <ContactForm />
-                        <ContactCode />
-                    </div>
+                    <ContactFormCode />
                 </div>
             </div>
         </div>
