@@ -8,6 +8,7 @@ const ContactForm = ({ onInputChange }) => {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isError, setIsError] = useState(false); // Nouvel état pour gérer les erreurs
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -30,12 +31,15 @@ const ContactForm = ({ onInputChange }) => {
             .then((response) => {
                 if (response.ok) {
                     setIsSubmitted(true);
+                    setIsError(false); // L'envoi a réussi
                 } else {
-                    console.log("L'envoi du formulaire a rencontré un problème");
+                    setIsSubmitted(true);
+                    setIsError(true); // L'envoi a échoué
                 }
             })
             .catch(() => {
-                console.log("L'envoi du formulaire a rencontré un problème");
+                setIsSubmitted(true);
+                setIsError(true); // L'envoi a échoué
             })
             .finally(() => {
                 setIsSubmitting(false);
@@ -45,6 +49,7 @@ const ContactForm = ({ onInputChange }) => {
     const resetForm = () => {
         setFormData({ name: '', email: '', message: '' });
         setIsSubmitted(false);
+        setIsError(false); // Réinitialiser l'état d'erreur
         onInputChange({ name: '', email: '', message: '' });
     };
 
@@ -94,15 +99,24 @@ const ContactForm = ({ onInputChange }) => {
                     <input
                         className='text-hover mouse-hover'
                         type="submit"
-                        value={isSubmitting ? 'Envoyez...' : 'Envoyez'}
+                        value={isSubmitting ? 'Envoyez le message...' : 'Envoyez le message'}
                         disabled={isSubmitting}
                     />
                 </form>
             ) : (
-                <div className="contact__container__form__content__container__message"> 
-                    <h3>Merci!</h3>
-                    <p>Votre message a bien été envoyé, vous recevrez une réponse sous peu!</p>
-                    <button onClick={resetForm}>Nouveau message</button>
+                <div className="contact__container__form__content__container__message">
+                    {isError ? (
+                        <>
+                            <h3>Désolé! 🥺</h3>
+                            <p>Votre message n'a pas été envoyé, veuillez ressayer s'il vous plaît!</p>
+                        </>
+                    ) : (
+                        <>
+                            <h3>Merci! 🤗</h3>
+                            <p>Votre message a bien été envoyé, vous recevrez une réponse sous peu!</p>
+                        </>
+                    )}
+                    <button className='text-hover mouse-hover' onClick={resetForm}>Nouveau message</button>
                 </div>
             )}
         </div>

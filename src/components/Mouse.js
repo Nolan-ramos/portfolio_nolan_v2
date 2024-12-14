@@ -7,6 +7,7 @@ const Mouse = () => {
     const location = useLocation(); // Permet de détecter les changements de route
 
     useEffect(() => {
+        // Cache le curseur natif
         document.body.style.cursor = 'none';
 
         const handleMouseMove = (e) => {
@@ -19,33 +20,44 @@ const Mouse = () => {
         window.addEventListener('mousemove', handleMouseMove);
 
         return () => {
+            // Réaffiche le curseur natif et nettoie les événements
             document.body.style.cursor = '';
             window.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
 
-    const attachHoverEvents = () => {
-        const elements = document.querySelectorAll('.mouse-hover');
-
-        elements.forEach((element) => {
-            const handleMouseEnter = () => setIsHovering(true);
-            const handleMouseLeave = () => setIsHovering(false);
-
-            element.addEventListener('mouseenter', handleMouseEnter);
-            element.addEventListener('mouseleave', handleMouseLeave);
-
-            // Nettoyage pour éviter des écouteurs multiples
-            return () => {
-                element.removeEventListener('mouseenter', handleMouseEnter);
-                element.removeEventListener('mouseleave', handleMouseLeave);
-            };
-        });
-    };
-
-    // Réattache les événements à chaque changement de route
     useEffect(() => {
+        const attachHoverEvents = () => {
+            console.log("new event");
+            const elements = document.querySelectorAll('.mouse-hover');
+
+            elements.forEach((element) => {
+                element.addEventListener('mouseenter', () => setIsHovering(true));
+                element.addEventListener('mouseleave', () => setIsHovering(false));
+            });
+
+            return () => {
+                elements.forEach((element) => {
+                    element.removeEventListener('mouseenter', () => setIsHovering(true));
+                    element.removeEventListener('mouseleave', () => setIsHovering(false));
+                });
+            };
+        };
+
+        const observer = new MutationObserver(() => {
+            attachHoverEvents();
+        });
+
+        // Observe le body pour détecter les changements dans le DOM
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        // Ajout initial des événements
         attachHoverEvents();
-    }, [location]); // location change à chaque changement de page
+
+        return () => {
+            observer.disconnect();
+        };
+    }, [location]); // Réattacher les événements à chaque changement de route
 
     const cursorStyle = {
         position: 'fixed',
