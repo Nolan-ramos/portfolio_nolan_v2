@@ -28,7 +28,6 @@ const Mouse = () => {
 
     useEffect(() => {
         const attachHoverEvents = () => {
-            console.log("new event");
             const elements = document.querySelectorAll('.mouse-hover');
 
             elements.forEach((element) => {

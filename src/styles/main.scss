@@ -26,3 +26,7 @@
 @use './pages/contact/contact_title' as *;
 @use './pages/contact/contact_form' as *;
 @use './pages/contact/contact_code' as *;
+
+@use './pages/projects/projects' as *;
+@use './pages/projects/projects_bar' as *;
+@use './pages/projects/projects_title' as *;

@@ -1,0 +1,79 @@
+.projects{
+    &__bar{
+        flex: 0 0 auto;
+        width: 300px;
+        height: 100%;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+        &__collapse{
+            max-height: 44px;
+            height: auto;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+            &__open{
+                max-height: 200px;
+            }
+            &__open &__title svg{
+                transform: rotate(0deg);
+            }
+            &__title{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                column-gap: 4px;
+                height: 44px;
+                padding: 0 24px;
+                border-bottom: 1px solid var(--border-color);
+                svg{
+                    transition: transform 0.3s ease-in-out;
+                    transform: rotate(-90deg);
+                }
+            }
+            &__languages{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                row-gap: 12px;
+                padding: 24px;
+            }
+        }
+        @media (max-width: 991px) {
+            &{
+                width: 290px;
+            }
+        }
+        @media (max-width: 768px) {
+            &{
+                width: 100%;
+                height: auto;
+                border-right: unset;
+                &__collapse{
+                    max-height: 32px;
+                    &__open{
+                        max-height: 180px;
+                    }
+                    &__title{
+                        height: 32px;
+                        background-color: var(--border-color);
+                        color: #fff;
+                        border-bottom: unset;
+                    }
+                }
+            }
+        }
+        @media (max-width: 420px) {
+            &{
+                &__collapse{
+                    &__title{
+                        padding: 0 16px;
+                        font-size: 14px;
+                    }
+                    &__languages{
+                        padding: 16px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

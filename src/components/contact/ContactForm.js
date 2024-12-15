@@ -8,13 +8,13 @@ const ContactForm = ({ onInputChange }) => {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [isError, setIsError] = useState(false); // Nouvel état pour gérer les erreurs
+    const [isError, setIsError] = useState(false);
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         const updatedData = { ...formData, [name]: value };
         setFormData(updatedData);
-        onInputChange(updatedData); // Remonter les données au parent
+        onInputChange(updatedData);
     };
 
     const handleSubmit = (event) => {
@@ -31,15 +31,15 @@ const ContactForm = ({ onInputChange }) => {
             .then((response) => {
                 if (response.ok) {
                     setIsSubmitted(true);
-                    setIsError(false); // L'envoi a réussi
+                    setIsError(false);
                 } else {
                     setIsSubmitted(true);
-                    setIsError(true); // L'envoi a échoué
+                    setIsError(true);
                 }
             })
             .catch(() => {
                 setIsSubmitted(true);
-                setIsError(true); // L'envoi a échoué
+                setIsError(true);
             })
             .finally(() => {
                 setIsSubmitting(false);
@@ -49,7 +49,7 @@ const ContactForm = ({ onInputChange }) => {
     const resetForm = () => {
         setFormData({ name: '', email: '', message: '' });
         setIsSubmitted(false);
-        setIsError(false); // Réinitialiser l'état d'erreur
+        setIsError(false);
         onInputChange({ name: '', email: '', message: '' });
     };
 

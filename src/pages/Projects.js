@@ -1,10 +1,15 @@
 import React from 'react';
-
+import ProjectsBar from '../components/projects/ProjectsBar';
+import ProjectsTitle from '../components/projects/ProjectsTitle';
 const Projects = () => {
     return (
-        <div>
-            <h1 className='text-hover mouse-hover'>Projects</h1>
-            <p>Bienvenue sur la Projectspage</p>
+        <div className='projects'>
+            <div className='projects__title__mob'>_projets</div>
+            <ProjectsBar />
+            <div className='projects__container'>
+                <ProjectsTitle />
+                tesst
+            </div>
         </div>
     );
 };

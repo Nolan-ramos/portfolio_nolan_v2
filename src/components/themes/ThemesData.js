@@ -1,6 +1,6 @@
 const themesData = {
-    purple: {
-        name: "Purple",
+    violet: {
+        name: "Violet",
         colors: {
             "--primary-background-color": "#120015",
             "--secondary-background-color": "#1E0038",
@@ -14,8 +14,8 @@ const themesData = {
             "--color": "#D3A8E6",
         },
     },
-    blue: {
-        name: "Blue",
+    bleu: {
+        name: "Bleu",
         colors: {
             "--primary-background-color": "#010C15",
             "--secondary-background-color": "#011e35",
@@ -29,8 +29,8 @@ const themesData = {
             "--color": "#607B96",
         },
     },
-    green: {
-        name: "Green",
+    vert: {
+        name: "Vert",
         colors: {
             "--primary-background-color": "#001A00",
             "--secondary-background-color": "#002600",
@@ -44,8 +44,8 @@ const themesData = {
             "--color": "#A8E6B8",
         },
     },
-    red: {
-        name: "Red",
+    rouge: {
+        name: "Rouge",
         colors: {
             "--primary-background-color": "#2A0000",
             "--secondary-background-color": "#3F0613",
@@ -59,8 +59,8 @@ const themesData = {
             "--color": "#F28A8A",
         },
     },
-    pink: {
-        name: "Pink",
+    rose: {
+        name: "Rose",
         colors: {
             "--primary-background-color": "#330015",
             "--secondary-background-color": "#4A0020",
