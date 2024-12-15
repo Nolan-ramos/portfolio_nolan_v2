@@ -11,7 +11,7 @@
             overflow: hidden;
             transition: 0.3s ease-in-out;
             &__open{
-                max-height: 200px;
+                max-height: 320px;
             }
             &__open &__title svg{
                 transform: rotate(0deg);
@@ -29,13 +29,6 @@
                     transform: rotate(-90deg);
                 }
             }
-            &__languages{
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                row-gap: 12px;
-                padding: 24px;
-            }
         }
         @media (max-width: 991px) {
             &{
@@ -50,7 +43,7 @@
                 &__collapse{
                     max-height: 32px;
                     &__open{
-                        max-height: 180px;
+                        max-height: 280px;
                     }
                     &__title{
                         height: 32px;
@@ -66,10 +59,6 @@
                 &__collapse{
                     &__title{
                         padding: 0 16px;
-                        font-size: 14px;
-                    }
-                    &__languages{
-                        padding: 16px;
                         font-size: 14px;
                     }
                 }

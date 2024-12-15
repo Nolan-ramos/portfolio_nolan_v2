@@ -2,13 +2,16 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { LineMdCloseSmall } from './icons/LineMdCloseSmall';
 
-const ProjectsTitle = () => {
+const ProjectsTitle = ({ activeLanguages }) => {
     return (
         <div className='projects__container__title'>
             <div className='projects__container__title__content'>
-                <span className='projects__container__title__content__text'>projets</span>
+                <span className='projects__container__title__content__text'>
+                    projets
+                    {activeLanguages.length > 0 && (<> : {activeLanguages.join('; ')}</>)}
+                </span>
                 <NavLink to="/" className='projects__container__title__content__icon mouse-hover text-hover'>
-                    <LineMdCloseSmall/>
+                    <LineMdCloseSmall />
                 </NavLink>
             </div>
         </div>
