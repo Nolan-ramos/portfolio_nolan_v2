@@ -97,7 +97,7 @@ const ContactForm = ({ onInputChange }) => {
                         ></textarea>
                     </div>
                     <input
-                        className='text-hover mouse-hover'
+                        className='mouse-hover'
                         type="submit"
                         value={isSubmitting ? 'Envoyez le message...' : 'Envoyez le message'}
                         disabled={isSubmitting}
@@ -116,7 +116,7 @@ const ContactForm = ({ onInputChange }) => {
                             <p>Votre message a bien été envoyé, vous recevrez une réponse sous peu!</p>
                         </>
                     )}
-                    <button className='text-hover mouse-hover' onClick={resetForm}>Nouveau message</button>
+                    <button className='mouse-hover' onClick={resetForm}>Nouveau message</button>
                 </div>
             )}
         </div>

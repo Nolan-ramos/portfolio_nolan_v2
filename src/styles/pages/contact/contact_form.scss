@@ -24,6 +24,7 @@
                     border-radius: 8px;
                     resize: none;
                     overflow-y: auto;
+                    transition: box-shadow 0.3s;
                     &:focus{
                         box-shadow: 0 0 2px var(--color);
                     }
@@ -40,6 +41,10 @@
                 color: var(--color);
                 padding: 12px 16px;
                 border-radius: 8px;
+                transition: opacity 0.3s ease-in-out;
+                &:hover{
+                    opacity: 80%;
+                }
             }
         }
         &__message{
@@ -62,6 +67,10 @@
                 padding: 12px 16px;
                 border-radius: 8px;
                 margin-top: 24px;
+                transition: opacity 0.3s ease-in-out;
+                &:hover{
+                    opacity: 80%;
+                }
             }
         }
     }
