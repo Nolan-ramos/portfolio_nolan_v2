@@ -9,6 +9,10 @@
             display: flex;
             align-items: center;
             column-gap: 24px;
+            &:hover &__checkbox,
+            &__active &__checkbox{
+                box-shadow: 0 0 2px var(--color);
+            }
             &__checkbox{
                 display: flex;
                 align-items: center;
@@ -18,7 +22,7 @@
                 border: 1px solid var(--border-color);
                 border-radius: 2px;
                 background-color: var(--secondary-background-color-opacity);
-                transition: background-color 0.3s ease-in-out;
+                transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
                 svg{
                     opacity: 0%;
                     height: 16px;

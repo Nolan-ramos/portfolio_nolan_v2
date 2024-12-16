@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import ProjectsBar from '../components/projects/ProjectsBar';
+import ProjectsContent from '../components/projects/ProjectsContent';
 import ProjectsTitle from '../components/projects/ProjectsTitle';
-import { MdiVuejs } from '../components/projects/icons/language/MdiVuejs';
-import { MdiLanguageJavascript } from '../components/projects/icons/language/MdiLanguageJavascript';
 import { IonLogoCss3 } from '../components/projects/icons/language/IonLogoCss3';
-import { MdiSass } from '../components/projects/icons/language/MdiSass';
+import { MdiLanguageJavascript } from '../components/projects/icons/language/MdiLanguageJavascript';
 import { MdiReact } from '../components/projects/icons/language/MdiReact';
+import { MdiSass } from '../components/projects/icons/language/MdiSass';
+import { MdiVuejs } from '../components/projects/icons/language/MdiVuejs';
 import { RiHtml5Fill } from '../components/projects/icons/language/RiHtml5Fill';
 
 const Projects = () => {
     const [activeLanguages, setActiveLanguages] = useState(['Vue', 'React']);
 
     const languages = [
-        { name: 'Vue', icon: <MdiVuejs /> },
-        { name: 'React', icon: <MdiReact /> },
-        { name: 'JS', icon: <MdiLanguageJavascript /> },
-        { name: 'Sass', icon: <MdiSass /> },
-        { name: 'CSS', icon: <IonLogoCss3 /> },
-        { name: 'HTML', icon: <RiHtml5Fill /> },
+        { name: 'Vue', icon: <MdiVuejs/> },
+        { name: 'React', icon: <MdiReact/> },
+        { name: 'JS', icon: <MdiLanguageJavascript/> },
+        { name: 'Sass', icon: <MdiSass/> },
+        { name: 'CSS', icon: <IonLogoCss3/> },
+        { name: 'HTML', icon: <RiHtml5Fill/> },
     ];
 
     return (
@@ -30,9 +31,7 @@ const Projects = () => {
             />
             <div className='projects__container'>
                 <ProjectsTitle activeLanguages={activeLanguages} />
-                <div className='projects__container__projects'>
-                    test
-                </div>
+                <ProjectsContent />
             </div>
         </div>
     );

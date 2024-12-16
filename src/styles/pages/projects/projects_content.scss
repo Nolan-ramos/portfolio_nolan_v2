@@ -1,0 +1,107 @@
+.projects{
+    &__container__content{
+        display: flex;
+        justify-content: center;
+        overflow-y: auto;
+        &__center{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding: 120px 24px 24px 24px;
+            max-width: 1240px;
+            height: fit-content;
+        }
+        &__project{
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+            width: 100%;
+            max-width: 380px;
+            &__title{
+                font-size: 18px;
+                font-weight: 500;
+            }
+            &__infos{
+                border-radius: 16px;
+                background-color: var(--tertiary-background-color);
+                border: 1px solid var(--border-color);
+                overflow: hidden;
+                &__image{
+                    height: 150px;
+                    object-fit: cover;
+                }
+                &__container{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    row-gap: 24px;
+                    padding: 24px;
+                    border-top: 1px solid var(--border-color);
+                    &__text{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 4px;
+                    }
+                    &__link{
+                        background-color: var(--border-color);
+                        color: var(--color);
+                        padding: 12px 16px;
+                        border-radius: 8px;
+                        transition: opacity 0.3s ease-in-out;
+                        &:hover{
+                            opacity: 80%;
+                        }
+                    }
+                }
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width: 1660px) {
+        &__container__content__center{
+            max-width: 835px;
+        }
+    }
+    @media (max-width: 1220px) {
+        &__container__content__center{
+            max-width: 430px;
+        }
+    }
+    @media (max-height: 900px), (max-width: 991px) {
+        &__container__content__center{
+            padding: 48px 24px 24px 24px;
+        }
+    }
+    @media (max-width: 768px) {
+        &__container__content__center{
+            padding: 24px;
+        }
+    }
+    @media (max-width: 420px) {
+        &__container__content{
+            &__center{
+                padding: 16px;
+            }
+            &__project{
+                row-gap: 12px;
+                &__title{
+                    font-size: 16px;
+                }
+                &__infos{
+                    &__container{
+                        row-gap: 16px;
+                        padding: 16px;
+                        &__text, &__link{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
