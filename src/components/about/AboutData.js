@@ -11,13 +11,13 @@ const AboutData = {
             key: 'profil',
             categorie: 'Profil',
             icon: <MaterialSymbolsCoPresentOutlineSharp />,
-            text: "Je suis un développeur passionné par les technologies modernes et l'innovation."
+            text: "Page en cours de développement"
         },
         {
             key: 'interets',
             categorie: 'Intérêts',
             icon: <IconParkOutlineEntertainment />,
-            text: "Je m'intéresse à l'IA, au développement web et à l'open source."
+            text: "Page en cours de développement"
         },
     ],
     expérience: [
@@ -25,7 +25,7 @@ const AboutData = {
             key: 'beyable',
             categorie: 'Beyable',
             icon: <PhSuitcaseSimple />,
-            text: "J'ai travaillé chez Beyable en tant que développeur front-end."
+            text: "Page en cours de développement"
         },
     ],
     formations: [
@@ -33,7 +33,7 @@ const AboutData = {
             key: 'hetic',
             categorie: 'Hetic',
             icon: <MaterialSymbolsSchoolOutline />,
-            text: "Je suis diplômé de l'école Hetic en développement web."
+            text: "Page en cours de développement"
         },
     ],
     compétences: [
@@ -41,13 +41,13 @@ const AboutData = {
             key: 'skills',
             categorie: 'Skills',
             icon: <MaterialSymbolsCodeBlocks />,
-            text: "Voici la liste de mes skills"
+            text: "Page en cours de développement"
         },
         {
             key: 'softs_skills',
             categorie: 'Softs & Skills',
             icon: <FluentBrainCircuit24Filled />,
-            text: "Voici la liste de mes softs & skills"
+            text: "Page en cours de développement"
         },
     ],
 };
