@@ -1,7 +1,7 @@
 const ProjectsData = [
     {
         id: 1,
-        title: 'Projet 1',
+        title: 'Portfolio V1',
         image: './images/projects/project1.png',
         description: [
             'Ce projet est la première version de mon portfolio.',
@@ -12,7 +12,7 @@ const ProjectsData = [
     },
     {
         id: 2,
-        title: 'Projet 2',
+        title: 'MARPA',
         image: './images/projects/project2.png',
         description: [
             'Développement du site d\'une MARPA où travaille une connaissance.',
@@ -23,25 +23,25 @@ const ProjectsData = [
     },
     {
         id: 3,
-        title: 'Projet 3',
+        title: 'Bumble-B',
         image: './images/projects/project3.png',
+        description: [
+            "Création d'une application mobile de course.",
+            'Permet de piloter un véhicule et récupérer ses données durant des courses.'
+        ],
+        link: 'https://github.com/Nolan-ramos/Bumble-B.git',
+        languages: ['React', 'CSS']
+    },
+    {
+        id: 4,
+        title: 'Portfolio pour un ami',
+        image: './images/projects/project4.png',
         description: [
             'Développement d\'un portfolio pour un ami.',
             'Les informations sont fictives et servent uniquement à illustrer le design.'
         ],
         link: 'https://portfolio-ami.vercel.app/',
         languages: ['JS', 'CSS', 'HTML']
-    },
-    {
-        id: 4,
-        title: 'Projet 4',
-        image: './images/projects/project4.png',
-        description: [
-            'Développement d\'un portfolio pour un ami.',
-            'Les informations sont fictives et servent uniquement à illustrer le design.'
-        ],
-        link: 'https://github.com/Nolan-ramos/Bumble-B.git',
-        languages: ['React', 'CSS']
     },
 ];
 

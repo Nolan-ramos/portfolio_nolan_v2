@@ -51,7 +51,7 @@ const ContactCode = ({ formData }) => {
                     </div>
                     <div className='contact__container__form__content__code__container__text'>
                         &nbsp;&nbsp;
-                        <span className='code__color__blue'>{'name'}</span>
+                        <span className='code__color__blue'>{'nomPrenom'}</span>
                         <span>{':'}</span>
                         &nbsp;
                         <span className='code__color__orange'>{`"${formData.name}"`}</span>

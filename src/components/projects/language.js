@@ -3,12 +3,12 @@ import {
     MdiLanguageJavascript,
     MdiReact,
     MdiSass,
-    MdiVuejs,
+    // MdiVuejs,
     RiHtml5Fill
 } from './icons/language';
 
 const languages = [
-    { name: 'Vue', icon: <MdiVuejs /> },
+    // { name: 'Vue', icon: <MdiVuejs /> },
     { name: 'React', icon: <MdiReact /> },
     { name: 'JS', icon: <MdiLanguageJavascript /> },
     { name: 'Sass', icon: <MdiSass /> },

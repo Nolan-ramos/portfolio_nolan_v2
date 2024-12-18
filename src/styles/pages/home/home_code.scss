@@ -17,7 +17,7 @@
             border-radius: 16px;
             border: 1px solid var(--border-color);
             background-color: var(--primary-background-color);
-            font-size: 16px;
+            font-size: 14px;
             color: var(---color);
             white-space: nowrap;
             &:nth-child(2), &:nth-child(4){
@@ -26,12 +26,6 @@
             &:nth-child(1), &:nth-child(5){
                 opacity: 25%;
             }
-        }
-    }
-    
-    @media (max-width: 1400px) {
-        &__code__content{
-            font-size: 14px;
         }
     }
     @media (max-width: 1300px) {

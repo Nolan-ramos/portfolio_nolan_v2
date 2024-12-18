@@ -4,25 +4,24 @@ import ContactFormCode from '../components/contact/ContactFormCode';
 import ContactTitle from '../components/contact/ContactTitle';
 
 const Contact = () => {
-    const [isContactOpen, setIsContactOpen] = useState(true);
-    const [isReseauxOpen, setIsReseauxOpen] = useState(true);
+    const [sectionsState, setSectionsState] = useState({
+        contacts: true,
+        reseaux: true,
+    });
 
-    const toggleContact = () => {
-        setIsContactOpen(!isContactOpen);
-    };
-
-    const toggleReseaux = () => {
-        setIsReseauxOpen(!isReseauxOpen);
+    const toggleSection = (section) => {
+        setSectionsState((prevState) => ({
+            ...prevState,
+            [section]: !prevState[section],
+        }));
     };
 
     return (
         <div className="contact">
             <div className='contact__title__mob'>_contact</div>
             <ContactBar
-                isContactOpen={isContactOpen}
-                isReseauxOpen={isReseauxOpen}
-                toggleContact={toggleContact}
-                toggleReseaux={toggleReseaux}
+                sectionsState={sectionsState}
+                toggleSection={toggleSection}
             />
             <div className='contact__container'>
                 <ContactTitle />

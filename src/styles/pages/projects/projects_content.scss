@@ -1,5 +1,5 @@
 .projects{
-    &__container__content{
+    &__container__content {
         display: flex;
         justify-content: center;
         overflow-y: auto;
@@ -7,7 +7,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 24px;
-            padding: 120px 24px 24px 24px;
+            padding: 120px 24px 48px 24px;
             max-width: 1236px;
             height: fit-content;
         }
@@ -54,7 +54,7 @@
                     }
                 }
                 &__image{
-                    height: 150px;
+                    height: 148px;
                     object-fit: cover;
                 }
                 &__container{
@@ -98,7 +98,7 @@
     }
     @media (max-height: 900px), (max-width: 991px) {
         &__container__content__center{
-            padding: 48px 24px 24px 24px;
+            padding: 48px 24px;
         }
     }
     @media (max-width: 768px) {
