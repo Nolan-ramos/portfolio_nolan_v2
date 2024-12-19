@@ -30,6 +30,8 @@
 @use './pages/about/about' as *;
 @use './pages/about/about_bar' as *;
 @use './pages/about/about_title' as *;
+@use './pages/about/about_text' as *;
+@use './pages/about/about_code' as *;
 
 @use './pages/projects/projects' as *;
 @use './pages/projects/projects_bar' as *;

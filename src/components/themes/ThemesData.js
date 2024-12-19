@@ -21,12 +21,12 @@ const themesData = {
             "--secondary-background-color": "#011e35",
             "--tertiary-background-color": "#011426",
             "--secondary-background-color-opacity": "#011e35CC",
-            "--border-color": "#1E2D3D",
+            "--border-color": "#124766",
             "--primary-action-color": "#00BFFF",
             "--secondary-action-color": "#00ff00",
             "--primary-shape-color": "#43d9ad",
             "--secondary-shape-color": "#4d5bce",
-            "--color": "#607B96",
+            "--color": "#90A8C0",
         },
     },
     vert: {
@@ -56,7 +56,7 @@ const themesData = {
             "--secondary-action-color": "#FF6F00",
             "--primary-shape-color": "#FF9B3D",
             "--secondary-shape-color": "#FF4F4F",
-            "--color": "#F28A8A",
+            "--color": "#FFC2C2",
         },
     },
     rose: {

@@ -39,6 +39,9 @@
                     row-gap: 12px;
                     padding: 24px;
                 }
+                &:last-child &__links{
+                    padding-bottom: 0px;
+                }
                 &__link{
                     display: flex;
                     align-items: center;

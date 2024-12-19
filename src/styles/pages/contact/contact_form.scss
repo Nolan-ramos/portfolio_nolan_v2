@@ -3,7 +3,7 @@
         flex: 0 0 40%;
         display: flex;
         justify-content: center;
-        padding: 120px 24px 24px 24px;
+        padding: 120px 24px 48px 24px;
         &__form{
             display: flex;
             flex-direction: column;
@@ -91,12 +91,12 @@
     }
     @media (max-width: 768px) {
         &__container__form__content__container{
-            padding: 24px;
+            padding: 48px 24px 24px 24px;
         }
     }
     @media (max-width: 420px) {
         &__container__form__content__container{
-            padding: 16px;
+            padding: 32px 16px 16px 16px;
             &__form__field{
                 label, input, textarea{
                     font-size: 14px;

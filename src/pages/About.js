@@ -2,26 +2,23 @@ import React, { useState } from 'react';
 import AboutBar from '../components/about/AboutBar';
 import AboutData from '../components/about/AboutData';
 import AboutTitle from '../components/about/AboutTitle';
+import AboutTextCode from '../components/about/AboutTextCode';
 
 const About = () => {
-    // Présentation -> Profil par défaut
     const defaultSectionKey = Object.keys(AboutData)[0]; 
     const defaultCategorieKey = AboutData[defaultSectionKey][0]?.key;
-
-    // Fermer toutes les sections par défaut sauf celles spécifiées
     const defaultOpenSections = ["présentation"];
+
     const [sectionsState, setSectionsState] = useState(
         Object.keys(AboutData).reduce((state, key) => {
             return { ...state, [key]: defaultOpenSections.includes(key) };
         }, {})
     );
 
-    // Données de la catégorie active
     const [activeCategorie, setActiveCategorie] = useState(
         AboutData[defaultSectionKey].find((item) => item.key === defaultCategorieKey)
     );
 
-    // Toggle des sections
     const toggleSection = (section) => {
         setSectionsState((prevState) => ({
             ...prevState,
@@ -29,7 +26,6 @@ const About = () => {
         }));
     };
 
-    // Changer la catégorie active
     const handleCategorieClick = (categorieKey) => {
         const sectionKeys = Object.keys(AboutData);
         for (const sectionKey of sectionKeys) {
@@ -53,12 +49,7 @@ const About = () => {
             <div className='about__container'>
                 <AboutTitle />
                 <div className='about__container__infos'>
-                    <div className='about__container__infos__content'>
-                        {activeCategorie ? activeCategorie.text : "Sélectionnez une catégorie pour voir les détails."}
-                    </div>
-                    <div className='about__container__infos__code'>
-                        {activeCategorie ? activeCategorie.text : "Sélectionnez une catégorie pour voir les détails."}
-                    </div>
+                    <AboutTextCode activeCategorie={activeCategorie} />
                 </div>
             </div>
         </div>

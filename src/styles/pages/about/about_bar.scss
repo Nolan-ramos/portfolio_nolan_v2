@@ -42,6 +42,9 @@
                     row-gap: 12px;
                     padding: 24px;
                 }
+                &:last-child &__categories{
+                    padding-bottom: 0px;
+                }
                 &__categorie{
                     display: flex;
                     align-items: center;
@@ -81,6 +84,7 @@
                             color: #fff;
                             border-bottom: unset;
                         }
+                        
                         &:not(:last-child){
                             border-bottom: unset;
                         }
@@ -95,13 +99,9 @@
                         padding: 0 16px;
                         font-size: 14px;
                     }
-                    &__links{
+                    &__categories{
                         padding: 16px;
                         font-size: 14px;
-                    }
-                    &__link{
-                        word-break: break-word;
-                        overflow-wrap: anywhere;
                     }
                 }
             }
