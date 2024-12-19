@@ -41,11 +41,24 @@ const AboutCode = ({ activeCategorie }) => {
             &nbsp;&nbsp;&nbsp;&nbsp;
             <span className='code__color__blue'>{'text'}</span>
             {': '}
-            <span className='code__color__orange'>{`'${activeCategorie?.text}'`}</span>
+            <span>{'['}</span>
+        </span>,
+        ...(activeCategorie?.text?.map((line, index) => (
+            <span key={index}>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className='code__color__orange'>{`"${line}"`}</span>
+                {index < activeCategorie.text.length - 1 ? ',' : ''}
+            </span>
+        )) || []),
+        <span>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <span>{']'}</span>
             {','}
         </span>,
         <span>&nbsp;&nbsp;{'}'}</span>,
-        <span>{'];'}</span>,
+        <span>
+            <span className='code__color__purple'>{']'}</span>{';'}
+        </span>,
         <span>
             <span className='code__color__blue'>{'export default'}</span>{' '}
             <span className='code__color__purple'>{'AboutData'}</span>{';'}
