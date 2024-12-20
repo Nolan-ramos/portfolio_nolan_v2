@@ -85,9 +85,13 @@
         }
     }
     @media (max-width: 991px) {
-        &__container__form__content__container__form{
-            max-width: 100%;
+        &__container__form__content__container{
+            padding: 48px 24px 24px 24px;
+            &__form{
+                max-width: 100%;
+            }
         }
+        
     }
     @media (max-width: 768px) {
         &__container__form__content__container{

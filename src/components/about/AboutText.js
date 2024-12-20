@@ -6,7 +6,10 @@ const AboutText = ({ activeCategorie }) => {
             <div className='about__container__infos__content__text__center'>
                 {Array.isArray(activeCategorie?.text) ? (
                     activeCategorie.text.map((line, index) => (
-                        <p key={index}>{line}</p>
+                        <p key={index}>
+                            {line}
+                            {activeCategorie?.section === 'Compétences' && index < activeCategorie.text.length - 1 && ' -'}
+                        </p>
                     ))
                 ) : (
                     <p>{activeCategorie?.text}</p>

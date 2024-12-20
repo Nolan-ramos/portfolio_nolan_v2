@@ -1,18 +1,22 @@
 .about{
     &__container__infos__content__text{
-        flex: 1 1 40%;
+        flex: 0 0 40%;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 120px 24px 48px 24px;
         &__center{
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             align-items: flex-start;
-            row-gap: 8px;
+            gap: 8px;
             max-width: 600px;
             width: fit-content;
             height: fit-content;
+            p{
+                word-break: break-word;
+                overflow-wrap: anywhere;
+            }
         }
     }
     @media (max-height: 900px), (max-width: 991px) {
@@ -21,8 +25,11 @@
         }
     }
     @media (max-width: 991px) {
-        &__container__infos__content__text__center{
-            max-width: 100%;
+        &__container__infos__content__text{
+            padding: 48px 24px 24px 24px;
+            &__center{
+                max-width: 100%;
+            }
         }
     }
     @media (max-width: 768px) {

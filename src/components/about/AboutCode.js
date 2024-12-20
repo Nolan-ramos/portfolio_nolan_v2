@@ -6,7 +6,7 @@ const AboutCode = ({ activeCategorie }) => {
             <span className='code__color__blue'>{'const'}</span>{' '}
             <span className='code__color__purple'>{'AboutData'}</span>{' '}
             <span className='code__color__blue'>{'='}</span>{' '}
-            <span className='code__color__purple'>{'['}</span>
+            <span>{'['}</span>
         </span>,
         <span>&nbsp;&nbsp;{'{'}</span>,
         <span>
@@ -38,26 +38,21 @@ const AboutCode = ({ activeCategorie }) => {
             {','}
         </span>,
         <span>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <span className='code__color__blue'>{'text'}</span>
-            {': '}
-            <span>{'['}</span>
-        </span>,
-        ...(activeCategorie?.text?.map((line, index) => (
-            <span key={index}>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className='code__color__orange'>{`"${line}"`}</span>
-                {index < activeCategorie.text.length - 1 ? ',' : ''}
-            </span>
-        )) || []),
-        <span>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <span>{']'}</span>
-            {','}
+            <div className='about__container__infos__content__code__container__text__group'>
+                <span className='code__color__blue'>{'text'}</span>
+                {': ['}
+                {activeCategorie?.text?.map((line, index) => (
+                    <span key={index} className='code__color__orange'>
+                        {`"${line}"`}
+                        {index < activeCategorie.text.length - 1 ? ',' : ''}
+                    </span>
+                ))}
+                {']'}
+            </div>
         </span>,
         <span>&nbsp;&nbsp;{'}'}</span>,
         <span>
-            <span className='code__color__purple'>{']'}</span>{';'}
+            <span>{']'}</span>{';'}
         </span>,
         <span>
             <span className='code__color__blue'>{'export default'}</span>{' '}
