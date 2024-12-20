@@ -4,6 +4,7 @@
     left:0;
     z-index: -1;
     height: 100vh;
+    max-height: 100%;
     width: 100%;
     background-color: var(--secondary-background-color-opacity);
     border-radius: 8px;
@@ -23,7 +24,7 @@
         animation-iteration-count: infinite;
         filter: blur(60px);
         &__first{
-            top: 48%;
+            top: 50%;
             right: 170px;
             background-color: var(--primary-shape-color);
             animation-name: shape_animation_1;
@@ -31,7 +32,7 @@
             transform-origin: center center;
         }
         &__second{
-            top: 58%;
+            top: 60%;
             right: 150px;
             background-color: var(--secondary-shape-color);
             animation-name: shape_animation_2;
