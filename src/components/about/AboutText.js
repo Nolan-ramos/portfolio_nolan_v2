@@ -9,6 +9,7 @@ const AboutText = ({ activeCategorie }) => {
                         <p key={index}>
                             {line}
                             {activeCategorie?.section === 'Compétences' && index < activeCategorie.text.length - 1 && ' -'}
+                            {activeCategorie?.key === 'interets' && index < activeCategorie.text.length - 1 && ' -'}
                         </p>
                     ))
                 ) : (

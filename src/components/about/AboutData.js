@@ -28,7 +28,7 @@ const AboutData = {
             key: 'interets',
             categorie: 'Intérêts',
             title: "Intérêts",
-            text: ["Page en cours de développement"],
+            text: ["Cinéma","Voyages","Musique","Cuisine","Mode","Jeux vidéos"],
             icon: <IconParkOutlineEntertainment />
 
         },
