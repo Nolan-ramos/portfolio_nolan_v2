@@ -1,5 +1,6 @@
 import { FluentBrainCircuit24Filled } from './icons/FluentBrainCircuit24Filled';
 import { IconParkOutlineEntertainment } from './icons/IconParkOutlineEntertainment';
+import { MaterialSymbolsAppRegistration } from './icons/MaterialSymbolsAppRegistration';
 import { MaterialSymbolsCodeBlocks } from './icons/MaterialSymbolsCodeBlocks';
 import { MaterialSymbolsCoPresentOutlineSharp } from './icons/MaterialSymbolsCoPresentOutlineSharp';
 import { MaterialSymbolsSchoolOutline } from './icons/MaterialSymbolsSchoolOutline';
@@ -61,7 +62,7 @@ const AboutData = {
             key: 'languages',
             categorie: 'Languages',
             title: "Languages",
-            text: ["Vue.js","React Native","React.js","Node.js","JavaScript","Express.js","CSS","HTML","SQL","PHP","Python","Figma","Adobe","Github"],
+            text: ["Vue.js","React Native","React.js","Node.js","JavaScript","Express.js","CSS","HTML","SQL","PHP","Python"],
             icon: <MaterialSymbolsCodeBlocks />,
 
         },
@@ -73,6 +74,16 @@ const AboutData = {
             title: "Softs & Skills",
             text: ["Créatif","Organisé","Polyvalent","Gestion du temps","Aime apprendre","Esprit d’analyse","Communication","Patience","Adaptabilité","Travailler en équipe"],
             icon: <FluentBrainCircuit24Filled />,
+
+        },
+        {
+            id: 7,
+            section: 'Compétences',
+            key: 'outils',
+            categorie: 'Outils',
+            title: "Outils",
+            text: ["Figma","Adobe","Github","Visual Studio"],
+            icon: <MaterialSymbolsAppRegistration />,
 
         },
     ],

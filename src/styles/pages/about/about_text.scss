@@ -40,6 +40,9 @@
     @media (max-width: 420px) {
         &__container__infos__content__text{
             padding: 32px 16px 16px 16px;
+            &__center{
+                font-size: 14px;
+            }
         }
     }
 }
