@@ -40,7 +40,11 @@ const AboutData = {
             key: 'beyable',
             categorie: 'Beyable',
             title: "Beyable",
-            text: ["Page en cours de développement"],
+            text: [
+                "Développement et intégration web pour des projets clients majeurs (Carrefour, Samsung, etc.), utilisant les API et les solutions e-commerce des clients (Shopify, Magento, Prestashop).",
+                "Création de composants no-code dans le back-office pour rendre les clients autonomes.",
+                "Maintenance, optimisation, et support technique en collaboration avec les Customer Success Managers."
+            ],
             icon: <PhSuitcaseSimple />
         },
     ],
@@ -51,7 +55,9 @@ const AboutData = {
             key: 'hetic',
             categorie: 'Hetic',
             title: "Hetic",
-            text: ["Page en cours de développement"],
+            text: [
+                "J'ai validé le Bachelor Développeur Web à HETIC, obtenu le diplôme et la certification professionnelle «Concepteur Développeur de Solutions Digitales»",
+                "Ce Bachelor forme en trois ans des développeurs spécialisés en solutions Web, Internet et Mobile, maîtrisant les aspects de Design, UX et transformation numérique."],
             icon: <MaterialSymbolsSchoolOutline />,
         },
     ],
