@@ -10,17 +10,17 @@ body {
     height: 100vh;
     width: 100%;
 }
-@supports (height: 100dvh) {
-    body{
-        height: 100dvh;
-    }
-}
 #root{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
     padding: 60px;
+}
+@supports (height: 100dvh) {
+    body, #root{
+        height: 100dvh;
+    }
 }
 @media (max-width: 1400px) {
     #root{
