@@ -29,6 +29,13 @@
     &__title__mob{
         padding: 24px;
     }
+    @media (max-width: 1200px) {
+        &__container{
+            &::after{
+                left: 45%;
+            }
+        }
+    }
     @media (max-width: 991px) {
         &__container{
             &::after{

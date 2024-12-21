@@ -51,8 +51,11 @@
         }
     }
     @media (max-width: 1200px) {
-        &__container__infos__content__code__center{
-            width: 30vw;
+        &__container__infos__content__code{
+            flex: 1 1 55%;
+            &__center{
+                width: 27.5vw;
+            }
         }
     }
     @media (max-height: 900px), (max-width: 991px) {
